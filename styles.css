@@ -1,7 +1,8 @@
 .container{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     flex-wrap: wrap;
+    max-width: 100px;
 }
 .header {
     display: flex;
