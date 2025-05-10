@@ -10,7 +10,11 @@ var rax;
 var ray;
 var x1;
 var y1;
+var x2;
+var y2;
+var sqrt;
 var k;
+
 
 function getResult() {
     var input = option.value;
@@ -49,7 +53,7 @@ function getResult() {
             break;
 
         case "sqrt":
-            sqrt();
+            sqrt2();
             break;
     }
 
@@ -62,7 +66,6 @@ function getResult() {
 
 function doMath() {
     input = option.value;
-    console.log(input)
     switch (input) {
         case "rotate90":
             rotate90();
@@ -85,15 +88,15 @@ function doMath() {
             break;
 
         case "distance":
-            midpoint();
-            break;
-
-        case "midpoint":
             distance();
             break;
 
+        case "midpoint":
+            midpoint();
+            break;
+
         case "sqrt":
-            sqrt2();
+            sqrt3();
             break;
     }
 }
@@ -107,7 +110,7 @@ function midpointDistance() {
     contx1.type = "text";
     container.appendChild(x1label);
     container.appendChild(contx1);
-    var x1 = document.querySelector("#x1")
+    x1 = document.querySelector("#x1")
 
     var x2label = document.createElement("label");
     x2label.textContent = "x2: ";
@@ -116,7 +119,7 @@ function midpointDistance() {
     contx2.type = "text";
     container.appendChild(x2label);
     container.appendChild(contx2);
-    var x2 = document.querySelector("#x2")
+    x2 = document.querySelector("#x2")
 
     var y1label = document.createElement("label");
     y1label.textContent = "y1: ";
@@ -125,7 +128,7 @@ function midpointDistance() {
     conty1.type = "text";
     container.appendChild(y1label);
     container.appendChild(conty1);
-    var y1 = document.querySelector("#y1");
+    y1 = document.querySelector("#y1");
 
     var y2label = document.createElement("label");
     y2label.textContent = "y2: ";
@@ -134,7 +137,7 @@ function midpointDistance() {
     conty2.type = "text";
     container.appendChild(y2label);
     container.appendChild(conty2);
-    var y2 = document.querySelector("#y2");
+    y2 = document.querySelector("#y2");
 }
 
 function rotate() {
@@ -243,7 +246,7 @@ function vector() {
     vy = document.querySelector("#vy");
 }
 
-function sqrt() {
+function sqrt2() {
     var sqrtlabel = document.createElement("label");
     sqrtlabel.textContent = "Number to square root: ";
     var contsqrt = document.createElement("input");
@@ -251,7 +254,7 @@ function sqrt() {
     contsqrt.type = "text";
     container.appendChild(sqrtlabel);
     container.appendChild(contsqrt);
-    var sqrt = document.querySelector("#sqrt")
+    sqrt = document.querySelector("#sqrt")
 }
 
 function rotate90() {
@@ -324,4 +327,82 @@ function dialate2() {
     var xans = x3 * k2;
     var yans = y3 * k2;
     answer.textContent = "Answer: (" + xans + "," + yans + ")";
+}
+
+function vector2() {
+    var x3 = x1.value;
+    x3 = parseInt(x3);
+    var y3 = y1.value;
+    y3 = parseInt(y3);
+    var vx2 = vx.value;
+    vx2 = parseInt(vx2);
+    var vy2 = vy.value;
+    vy2 = parseInt(vy2);
+    var xans = x3 + vx2;
+    var yans = y3 + vy2;
+    answer.textContent = "Answer: (" + xans + "," + yans + ")";
+}
+
+function midpoint() {
+    var x3 = x1.value;
+    x3 = parseInt(x3);
+    var y3 = y1.value;
+    y3 = parseInt(y3);
+    var x4 = x2.value;
+    x4 = parseInt(x4);
+    var y4 = y2.value;
+    y4 = parseInt(y4);
+    xans = (x3 + x4) / 2;
+    yans = (y3 + y4) / 2;
+    answer.textContent = "Answer: (" + xans + "," + yans + ")";
+}
+
+function distance() {
+    var x3 = x1.value;
+    x3 = parseInt(x3);
+    var y3 = y1.value;
+    y3 = parseInt(y3);
+    var x4 = x2.value;
+    x4 = parseInt(x4);
+    var y4 = y2.value;
+    y4 = parseInt(y4);
+    var x5 = x3 - x4;
+    x5 = x5 * x5;
+    var y5 = y3 - y4;
+    y5 = y5 * y5;
+    var ans = y5 + x5;
+    ans = Math.sqrt(ans);
+    answer.textContent = "Answer: " + ans;
+
+}
+
+function sqrt3() {
+    var sqrt4 = sqrt.value;
+    sqrt4 = parseInt(sqrt4);
+    var i = 3;
+    var sqr = 4;
+    var time = 1;
+    var stop = sqrt4 / 2;
+    var found = "false";
+    while (sqr < stop && found === "false") {
+        switch (sqrt4 % sqr) {
+            case 0:
+                var ans1 = sqrt4 / sqr;
+                var ans2 = sqrt4 / ans1;
+                answer.textContent = "Answer: " + ans2 + " , " + ans1;
+                found = "true";
+                break;
+
+            default:
+                i = i + 2;
+                sqr = sqr + i;
+                time++
+                break;
+
+        }
+    }
+    if (found === "false") {
+        answer.textContent = "Not divisible";
+    }
+
 }
