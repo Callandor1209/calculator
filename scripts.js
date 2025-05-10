@@ -5,6 +5,8 @@ const option = document.querySelector("#option");
 const container = document.querySelector("#container");
 const break1 = document.createElement("br");
 const answer = document.querySelector("#answer");
+const drkmode = document.querySelector("#drkmode");
+drkmode.addEventListener
 var input;
 var rax;
 var ray;
@@ -405,4 +407,9 @@ function sqrt3() {
         answer.textContent = "Not divisible";
     }
 
+}
+
+function darkmode(){
+    var element = document.body;
+    element.classList.toggle("darkmode");
 }
