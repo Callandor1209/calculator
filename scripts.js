@@ -381,35 +381,31 @@ function distance() {
 function sqrt3() {
     var sqrt4 = sqrt.value;
     sqrt4 = parseInt(sqrt4);
-    var i = 3;
-    var sqr = 4;
-    var time = 1;
+    var i = 1;
+    var sqr = 1;
     var stop = sqrt4 / 2;
     var found = "false";
-    while (sqr < stop && found === "false") {
+    while (sqr < stop) {
+        i = i + 2;
+        sqr = sqr + i;
         switch (sqrt4 % sqr) {
             case 0:
                 var ans1 = sqrt4 / sqr;
                 var ans2 = sqrt4 / ans1;
-                answer.textContent = "Answer: " + ans2 + " , " + ans1;
+                var ans3 = Math.sqrt(ans2);
+                answer.textContent = "Answer: " + ans2 + " , " + ans1 + " True answer: " + ans3 + "√" + ans1 ;
                 found = "true";
-                break;
 
-            default:
-                i = i + 2;
-                sqr = sqr + i;
-                time++
                 break;
-
         }
     }
-    if (found === "false") {
-        answer.textContent = "Not divisible";
-    }
 
+    if (found === "false") {
+        answer.textContent = 'Not divisible'
+    }
 }
 
-function darkmode(){
+function darkmode() {
     var element = document.body;
     element.classList.toggle("darkmode");
 }
