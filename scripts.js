@@ -493,7 +493,7 @@ function pyththmhyp2(){
     b3 = b3 * b3;
     ab = a3 + b3;
     ans = Math.sqrt(ab);
-    answer.textContent = "Answer: " + cans;
+    answer.textContent = "Answer: " + ans;
     answer.textContent = answer.textContent + sqrt3(ab);
 }
 
