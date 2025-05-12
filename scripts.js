@@ -1,3 +1,4 @@
+//JavaScript file
 const output = document.querySelector("#output");
 const submit = document.querySelector("#submit");
 submit.addEventListener("click", getResult);
@@ -19,6 +20,8 @@ var k;
 var c;
 var a;
 var b;
+var ans;
+var ans2;
 
 
 function getResult() {
@@ -61,8 +64,12 @@ function getResult() {
             sqrt2();
             break;
             
-        case "pyththm":
-            pyththm();
+        case "pyththmhyp":
+            pyththmhyp();
+            break;
+        
+        case "pyththmleg":
+            pyththmleg();
             break;
     }
 
@@ -105,11 +112,15 @@ function doMath() {
             break;
 
         case "sqrt":
-            sqrt3();
+            sqrt3(sqrt.value);
             break;
 
-        case "pyththm":
-            pyththm2();
+        case "pyththmleg":
+            pyththmleg2();
+            break;
+        
+        case "pyththmhyp":
+            pyththmhyp2();
             break;
     }
 }
@@ -389,8 +400,7 @@ function distance() {
 
 }
 
-function sqrt3() {
-    var sqrt4 = sqrt.value;
+function sqrt3(sqrt4) {
     sqrt4 = parseInt(sqrt4);
     var i = 1;
     var sqr = 1;
@@ -416,7 +426,8 @@ function sqrt3() {
     }
 }
 
-function pyththm(){
+
+function pyththmhyp(){
      var x1label = document.createElement("label");
     x1label.textContent = "a: ";
     var contx1 = document.createElement("input");
@@ -435,29 +446,53 @@ function pyththm(){
     container.appendChild(conty1);
     b1 = document.querySelector("#b");
 
-    /*var dialatelabel = document.createElement("label");
+}
+
+function pyththmleg(){
+     var x1label = document.createElement("label");
+    x1label.textContent = "a/b: ";
+    var contx1 = document.createElement("input");
+    contx1.setAttribute("id", "a");
+    contx1.type = "text";
+    container.appendChild(x1label);
+    container.appendChild(contx1);
+    a1 = document.querySelector("#a");
+
+        var dialatelabel = document.createElement("label");
     dialatelabel.textContent = "c: "
     var contdialate = document.createElement("input");
     contdialate.setAttribute("id", "c");
     contdialate.type = "text";
     container.appendChild(dialatelabel);
     container.appendChild(contdialate);
-    k = document.querySelector("#c"); */
+    c1 = document.querySelector("#c"); 
 }
 
-function pyththm2(){
+function pyththmleg2(){
     var a3 = a1.value;
     a3 = parseInt(a3);
     var b3 = b1.value;
     b3 = parseInt(b3);
-    //var c2 = c.value;
-    //c2 = parseInt(c2);
     a3 = a3 * a3;
     b3 = b3 * b3;
     ab = a3 + b3;
-    cans = Math.sqrt(ab);
+    ans = Math.sqrt(ab);
     answer.textContent = "Answer: " + cans;
+    answer.textContent = answer.textContent + sqrt3(ab);
 
+}
+
+function pyththmhyp2(){
+    var a3 = a1.value;
+    a3 = parseInt(a3);
+    var c3 = c1.value;
+    c3 = parseInt(c3);
+    c3 = c3 * c3;
+    a3 = a3 * a3;
+    ans = c3-a3;
+    ans2 = Math.sqrt(ans);
+    answer.textContent = "Answer: " + ans2;
+    answer.textContent = answer.textContent + sqrt3(ans);
 }
 
 function darkmode() {
