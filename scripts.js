@@ -4,7 +4,6 @@ const submit = document.querySelector("#submit");
 submit.addEventListener("click", getResult);
 const option = document.querySelector("#option");
 const container = document.querySelector("#container");
-const break1 = document.createElement("br");
 const answer = document.querySelector("#answer");
 const drkmode = document.querySelector("#darkmode");
 drkmode.addEventListener("click", darkmode);
@@ -404,18 +403,21 @@ function sqrt3(sqrt4) {
     sqrt4 = parseInt(sqrt4);
     var i = 1;
     var sqr = 1;
-    var stop = sqrt4 / 2;
     var found = "false";
-    while (sqr < stop) {
+    while (sqr < sqrt4) {
         i = i + 2;
         sqr = sqr + i;
+        if(sqr===sqrt4){
+            answer.textContent = Math.sqrt(sqrt4);
+            return Math.sqrt(sqrt4);
+        }
         switch (sqrt4 % sqr) {
             case 0:
                 var ans1 = sqrt4 / sqr;
                 var ans2 = sqrt4 / ans1;
                 var ans3 = Math.sqrt(ans2);
-                var ans4 = ans3 + "√" + ans1 ;
-                answer.textContent = "Answer: " + ans2 + " , " + ans1 + " True answer: " + ans3 + "√" + ans1 ;
+                var ans4 = ans3 + "√" + ans1;
+                answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans1 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4); ;
                 found = "true";
 
                 break;
@@ -423,7 +425,8 @@ function sqrt3(sqrt4) {
     }
 
     if (found === "false") {
-        answer.textContent = "√" + sqrt4;
+        answer.textContent = "√" + sqrt4 + "Estimated answer: " + Math.sqrt(sqrt4);
+        return "No simplification";
     }
     return ans4;
 }
@@ -460,7 +463,7 @@ function pyththmleg(){
     container.appendChild(contx1);
     a1 = document.querySelector("#a");
 
-        var dialatelabel = document.createElement("label");
+    var dialatelabel = document.createElement("label");
     dialatelabel.textContent = "c: "
     var contdialate = document.createElement("input");
     contdialate.setAttribute("id", "c");
@@ -480,7 +483,7 @@ function pyththmleg2(){
     ans = c3-a3;
     ans2 = Math.sqrt(ans);
     answer.textContent = "Answer: " + ans2;
-    answer.textContent = answer.textContent + sqrt3(ans);
+    answer.textContent = answer.textContent + '\n' + sqrt3(ans);
 
 }
 
@@ -493,8 +496,8 @@ function pyththmhyp2(){
     b3 = b3 * b3;
     ab = a3 + b3;
     ans = Math.sqrt(ab);
-    answer.textContent = "Answer: " + ans;
-    answer.textContent = answer.textContent + sqrt3(ab);
+    answer.textContent = "Answer: " + ans + " , √" + ab;
+    answer.textContent = answer.textContent + '\n'+ sqrt3(ab);
 }
 
 function darkmode() {
