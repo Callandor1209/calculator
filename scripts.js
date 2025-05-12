@@ -482,17 +482,6 @@ function pyththmleg2(){
     answer.textContent = "Answer: " + ans2;
     answer.textContent = answer.textContent + sqrt3(ans);
 
-    var a3 = a1.value;
-    a3 = parseInt(a3);
-    var b3 = b1.value;
-    b3 = parseInt(b3);
-    a3 = a3 * a3;
-    b3 = b3 * b3;
-    ab = a3 + b3;
-    ans = Math.sqrt(ab);
-    answer.textContent = "Answer: " + cans;
-    answer.textContent = answer.textContent + sqrt3(ab);
-
 }
 
 function pyththmhyp2(){
