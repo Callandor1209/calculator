@@ -414,6 +414,7 @@ function sqrt3(sqrt4) {
                 var ans1 = sqrt4 / sqr;
                 var ans2 = sqrt4 / ans1;
                 var ans3 = Math.sqrt(ans2);
+                var ans4 = ans3 + "√" + ans1 ;
                 answer.textContent = "Answer: " + ans2 + " , " + ans1 + " True answer: " + ans3 + "√" + ans1 ;
                 found = "true";
 
@@ -424,6 +425,7 @@ function sqrt3(sqrt4) {
     if (found === "false") {
         answer.textContent = "√" + sqrt4;
     }
+    return ans4;
 }
 
 
@@ -471,6 +473,17 @@ function pyththmleg(){
 function pyththmleg2(){
     var a3 = a1.value;
     a3 = parseInt(a3);
+    var c3 = c1.value;
+    c3 = parseInt(c3);
+    c3 = c3 * c3;
+    a3 = a3 * a3;
+    ans = c3-a3;
+    ans2 = Math.sqrt(ans);
+    answer.textContent = "Answer: " + ans2;
+    answer.textContent = answer.textContent + sqrt3(ans);
+
+    var a3 = a1.value;
+    a3 = parseInt(a3);
     var b3 = b1.value;
     b3 = parseInt(b3);
     a3 = a3 * a3;
@@ -485,14 +498,14 @@ function pyththmleg2(){
 function pyththmhyp2(){
     var a3 = a1.value;
     a3 = parseInt(a3);
-    var c3 = c1.value;
-    c3 = parseInt(c3);
-    c3 = c3 * c3;
+    var b3 = b1.value;
+    b3 = parseInt(b3);
     a3 = a3 * a3;
-    ans = c3-a3;
-    ans2 = Math.sqrt(ans);
-    answer.textContent = "Answer: " + ans2;
-    answer.textContent = answer.textContent + sqrt3(ans);
+    b3 = b3 * b3;
+    ab = a3 + b3;
+    ans = Math.sqrt(ab);
+    answer.textContent = "Answer: " + cans;
+    answer.textContent = answer.textContent + sqrt3(ab);
 }
 
 function darkmode() {
