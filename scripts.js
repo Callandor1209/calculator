@@ -401,7 +401,7 @@ function sqrt3() {
     }
 
     if (found === "false") {
-        answer.textContent = 'Not divisible'
+        answer.textContent = "√" + sqrt4;
     }
 }
 
