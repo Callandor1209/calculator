@@ -9,10 +9,15 @@
     justify-content: center;
     background-color: teal;
     padding: 0.5in;
+    border: 0px;
+    margin: 0px;
+    margin-bottom: 8px;
 }
 button{
     background-color: green;
     color: whitesmoke;
+    border-radius: 10px;
+    margin-top: 8px;
 }
 .darkmode{
     color: white;

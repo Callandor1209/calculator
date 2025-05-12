@@ -25,6 +25,7 @@ var ans2;
 
 function getResult() {
     var input = option.value;
+    answer.textContent = "";
 
     while (container.firstChild) {
         container.removeChild(container.firstChild);
@@ -62,11 +63,11 @@ function getResult() {
         case "sqrt":
             sqrt2();
             break;
-            
+
         case "pyththmhyp":
             pyththmhyp();
             break;
-        
+
         case "pyththmleg":
             pyththmleg();
             break;
@@ -117,7 +118,7 @@ function doMath() {
         case "pyththmleg":
             pyththmleg2();
             break;
-        
+
         case "pyththmhyp":
             pyththmhyp2();
             break;
@@ -407,7 +408,7 @@ function sqrt3(sqrt4) {
     while (sqr < sqrt4) {
         i = i + 2;
         sqr = sqr + i;
-        if(sqr===sqrt4){
+        if (sqr === sqrt4) {
             answer.textContent = Math.sqrt(sqrt4);
             return Math.sqrt(sqrt4);
         }
@@ -417,7 +418,7 @@ function sqrt3(sqrt4) {
                 var ans2 = sqrt4 / ans1;
                 var ans3 = Math.sqrt(ans2);
                 var ans4 = ans3 + "√" + ans1;
-                answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans1 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4); ;
+                answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans1 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4);;
                 found = "true";
 
                 break;
@@ -432,8 +433,8 @@ function sqrt3(sqrt4) {
 }
 
 
-function pyththmhyp(){
-     var x1label = document.createElement("label");
+function pyththmhyp() {
+    var x1label = document.createElement("label");
     x1label.textContent = "a: ";
     var contx1 = document.createElement("input");
     contx1.setAttribute("id", "a");
@@ -453,8 +454,8 @@ function pyththmhyp(){
 
 }
 
-function pyththmleg(){
-     var x1label = document.createElement("label");
+function pyththmleg() {
+    var x1label = document.createElement("label");
     x1label.textContent = "a/b: ";
     var contx1 = document.createElement("input");
     contx1.setAttribute("id", "a");
@@ -470,24 +471,24 @@ function pyththmleg(){
     contdialate.type = "text";
     container.appendChild(dialatelabel);
     container.appendChild(contdialate);
-    c1 = document.querySelector("#c"); 
+    c1 = document.querySelector("#c");
 }
 
-function pyththmleg2(){
+function pyththmleg2() {
     var a3 = a1.value;
     a3 = parseInt(a3);
     var c3 = c1.value;
     c3 = parseInt(c3);
     c3 = c3 * c3;
     a3 = a3 * a3;
-    ans = c3-a3;
+    ans = c3 - a3;
     ans2 = Math.sqrt(ans);
-    answer.textContent = "Answer: " + ans2;
+    answer.textContent = "Answer: " + ans2 + " , √" + ans;
     answer.textContent = answer.textContent + '\n' + sqrt3(ans);
 
 }
 
-function pyththmhyp2(){
+function pyththmhyp2() {
     var a3 = a1.value;
     a3 = parseInt(a3);
     var b3 = b1.value;
@@ -497,7 +498,7 @@ function pyththmhyp2(){
     ab = a3 + b3;
     ans = Math.sqrt(ab);
     answer.textContent = "Answer: " + ans + " , √" + ab;
-    answer.textContent = answer.textContent + '\n'+ sqrt3(ab);
+    answer.textContent = answer.textContent + '\n' + sqrt3(ab);
 }
 
 function darkmode() {
