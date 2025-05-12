@@ -184,7 +184,7 @@ function rotate() {
     y1 = document.querySelector("#y1");
 
     var raxlabel = document.createElement("label");
-    raxlabel.textContent = "Roate around x: ";
+    raxlabel.textContent = "Rotate around x: ";
     var contrax = document.createElement("input");
     contrax.setAttribute("id", "rax");
     contrax.type = "text";
@@ -193,7 +193,7 @@ function rotate() {
     rax = document.querySelector("#rax");
 
     var raylabel = document.createElement("label");
-    raylabel.textContent = "Roate around y: ";
+    raylabel.textContent = "Rotate around y: ";
     var contray = document.createElement("input");
     contray.setAttribute("id", "ray");
     contray.type = "text";
