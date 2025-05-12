@@ -16,6 +16,9 @@ var x2;
 var y2;
 var sqrt;
 var k;
+var c;
+var a;
+var b;
 
 
 function getResult() {
@@ -56,6 +59,10 @@ function getResult() {
 
         case "sqrt":
             sqrt2();
+            break;
+            
+        case "pyththm":
+            pyththm();
             break;
     }
 
@@ -99,6 +106,10 @@ function doMath() {
 
         case "sqrt":
             sqrt3();
+            break;
+
+        case "pyththm":
+            pyththm2();
             break;
     }
 }
@@ -403,6 +414,50 @@ function sqrt3() {
     if (found === "false") {
         answer.textContent = "√" + sqrt4;
     }
+}
+
+function pyththm(){
+     var x1label = document.createElement("label");
+    x1label.textContent = "a: ";
+    var contx1 = document.createElement("input");
+    contx1.setAttribute("id", "a");
+    contx1.type = "text";
+    container.appendChild(x1label);
+    container.appendChild(contx1);
+    x1 = document.querySelector("#a")
+
+    var y1label = document.createElement("label");
+    y1label.textContent = "b: ";
+    var conty1 = document.createElement("input");
+    conty1.setAttribute("id", "b");
+    conty1.type = "text";
+    container.appendChild(y1label);
+    container.appendChild(conty1);
+    y1 = document.querySelector("#b");
+
+    /*var dialatelabel = document.createElement("label");
+    dialatelabel.textContent = "c: "
+    var contdialate = document.createElement("input");
+    contdialate.setAttribute("id", "c");
+    contdialate.type = "text";
+    container.appendChild(dialatelabel);
+    container.appendChild(contdialate);
+    k = document.querySelector("#c"); */
+}
+
+function pyththm2(){
+    var a3 = a.value;
+    a3 = parseInt(a3);
+    var b3 = b.value;
+    b3 = parseInt(b3);
+    //var c2 = c.value;
+    //c2 = parseInt(c2);
+    a3 = a3 * a3;
+    b3 = b3 * b3;
+    ab = a3 + b3;
+    cans = Math.sqrt(ab);
+    answer.textContent = "Answer: " + cans;
+
 }
 
 function darkmode() {
