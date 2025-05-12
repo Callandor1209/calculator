@@ -424,7 +424,7 @@ function pyththm(){
     contx1.type = "text";
     container.appendChild(x1label);
     container.appendChild(contx1);
-    x1 = document.querySelector("#a")
+    a1 = document.querySelector("#a")
 
     var y1label = document.createElement("label");
     y1label.textContent = "b: ";
@@ -433,7 +433,7 @@ function pyththm(){
     conty1.type = "text";
     container.appendChild(y1label);
     container.appendChild(conty1);
-    y1 = document.querySelector("#b");
+    b1 = document.querySelector("#b");
 
     /*var dialatelabel = document.createElement("label");
     dialatelabel.textContent = "c: "
@@ -446,9 +446,9 @@ function pyththm(){
 }
 
 function pyththm2(){
-    var a3 = a.value;
+    var a3 = a1.value;
     a3 = parseInt(a3);
-    var b3 = b.value;
+    var b3 = b1.value;
     b3 = parseInt(b3);
     //var c2 = c.value;
     //c2 = parseInt(c2);
