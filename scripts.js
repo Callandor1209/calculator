@@ -434,7 +434,7 @@ function sqrt3(sqrt4) {
     }
 
     if (found === "false") {
-        answer.textContent = "√" + sqrt4 + "Estimated answer: " + Math.sqrt(sqrt4);
+        answer.textContent = "√" + sqrt4 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4);
         return "No simplification";
     }
     return ans4;
