@@ -546,11 +546,11 @@ function isItTri2() {
     b3 = parseInt(b3);
     var c3 = c1.value;
     c3 = parseInt(c3);
-    if (a + b > c && a + c > b && c + b > a) {
+    if (a3 + b3 > c3 && a3 + c3 > b3 && c3 + b3 > a3) {
         answer.textContent = "It is a triangle ";
-        a2 = a * a;
-        b2 = b * b;
-        c2 = c * c;
+        a2 = a3 * a3;
+        b2 = b3 * b3;
+        c2 = c3 * c3;
         if (a2 + b2 === c2) {
             answer.textContent = answer.textContent + "It is a right triangle"
         }
