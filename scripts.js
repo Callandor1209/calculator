@@ -613,13 +613,25 @@ function quadratics2(){
     c3 = parseInt(c3);
 
     var bsq= b3 * b3;
+    console.log(bsq);
     var ac4 = -4 * a3 * c3;
+    console.log(ac4);
     var a2 = 2 * a3;
+    console.log(a2);
     var oppb = b3 * -1;
+    console.log(oppb);
     var tobesqrt = bsq + ac4;
+    if(tobesqrt<1){
+        answer.textContent = "This is a negetive number and is imaginary"
+        return;
+    }
+    console.log(tobesqrt);
     var sqrt10 = Math.sqrt(tobesqrt);
+    console.log(sqrt10);
     var ans1 = oppb + sqrt10;
+    console.log(ans1);
     var ans2 = oppb - sqrt10;
+    console.log(ans2);
     ans1 = ans1 / a2;
     ans2 = ans2 / a2;
     answer.textContent = "Answer: " + ans1 + " , " + ans2;
