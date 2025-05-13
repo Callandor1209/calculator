@@ -614,7 +614,7 @@ function quadratics2(){
 
     var bsq= b3 * b3;
     var ac4 = -4 * a3 * c3;
-    var a2 = 2 * a;
+    var a2 = 2 * a3;
     var oppb = b3 * -1;
     var tobesqrt = bsq + ac4;
     var sqrt10 = Math.sqrt(tobesqrt);
