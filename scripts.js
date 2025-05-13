@@ -75,6 +75,10 @@ function getResult() {
         case "isItTri":
             isItTri();
             break;
+
+        case "quadratics":
+            quadratics();
+            break;
     }
 
     const submitbutton2 = document.createElement("button");
@@ -129,6 +133,10 @@ function doMath() {
 
         case "isItTri":
             isItTri2();
+            break;
+
+        case "quadratics":
+            quadratics2();
             break;
     }
 }
@@ -564,6 +572,57 @@ function isItTri2() {
     else {
         answer.textContent = "It is not a triangle ";
     }
+}
+
+function quadratics(){
+    var x1label = document.createElement("label");
+    x1label.textContent = "a: ";
+    var contx1 = document.createElement("input");
+    contx1.setAttribute("id", "a");
+    contx1.type = "text";
+    container.appendChild(x1label);
+    container.appendChild(contx1);
+    a1 = document.querySelector("#a");
+
+    var y1label = document.createElement("label");
+    y1label.textContent = "b: ";
+    var conty1 = document.createElement("input");
+    conty1.setAttribute("id", "b");
+    conty1.type = "text";
+    container.appendChild(y1label);
+    container.appendChild(conty1);
+    b1 = document.querySelector("#b");
+
+
+    var dialatelabel = document.createElement("label");
+    dialatelabel.textContent = "c: "
+    var contdialate = document.createElement("input");
+    contdialate.setAttribute("id", "c");
+    contdialate.type = "text";
+    container.appendChild(dialatelabel);
+    container.appendChild(contdialate);
+    c1 = document.querySelector("#c");
+}
+
+function quadratics2(){
+    var a3 = a1.value;
+    a3 = parseInt(a3);
+    var b3 = b1.value;
+    b3 = parseInt(b3);
+    var c3 = c1.value;
+    c3 = parseInt(c3);
+
+    var bsq= b3 * b3;
+    var ac4 = -4 * a3 * c3;
+    var a2 = 2 * a;
+    var oppb = b3 * -1;
+    var tobesqrt = bsq + ac4;
+    var sqrt10 = Math.sqrt(tobesqrt);
+    var ans1 = oppb + sqrt10;
+    var ans2 = oppb - sqrt10;
+    ans1 = ans1 / a2;
+    ans2 = ans2 / a2;
+    answer.textContent = "Answer: " + ans1 + " , " + ans2;
 }
 
 function darkmode() {
