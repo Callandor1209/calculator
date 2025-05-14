@@ -621,8 +621,12 @@ function quadratics2(){
     var oppb = b3 * -1;
     console.log(oppb);
     var tobesqrt = bsq + ac4;
-    if(tobesqrt<1){
-        answer.textContent = "This is a negetive number and is imaginary"
+    if(tobesqrt<0){
+        tobesqrt = tobesqrt * -1;
+        sqrt10 = Math.sqrt(tobesqrt);
+        sqrt10 = sqrt10/a2;
+        oppb = oppb/a2;
+        answer.textContent = "Answer: " + oppb + " ±  " + sqrt10 + "i";
         return;
     }
     console.log(tobesqrt);
