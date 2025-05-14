@@ -299,13 +299,13 @@ function sqrt2() {
 
 function rotate90() {
     var x3 = x1.value;
-    x3 = parseInt(x3);
+    x3 = parseFloat(x3);
     var y3 = y1.value;
-    y3 = parseInt(y3);
+    y3 = parseFloat(y3);
     var rax3 = rax.value;
-    rax3 = parseInt(rax3);
+    rax3 = parseFloat(rax3);
     var ray3 = ray.value;
-    ray3 = parseInt(ray3);
+    ray3 = parseFloat(ray3);
     var rax2 = -rax3;
     var ray2 = -ray3;
     x3 = x3 + rax2;
@@ -319,13 +319,13 @@ function rotate90() {
 
 function rotate180() {
     var x3 = x1.value;
-    x3 = parseInt(x3);
+    x3 = parseFloat(x3);
     var y3 = y1.value;
-    y3 = parseInt(y3);
+    y3 = parseFloat(y3);
     var rax3 = rax.value;
-    rax3 = parseInt(rax3);
+    rax3 = parseFloat(rax3);
     var ray3 = ray.value;
-    ray3 = parseInt(ray3);
+    ray3 = parseFloat(ray3);
     var rax2 = -rax3;
     var ray2 = -ray3;
     x3 = x3 + rax2;
@@ -339,13 +339,13 @@ function rotate180() {
 
 function rotate270() {
     var x3 = x1.value;
-    x3 = parseInt(x3);
+    x3 = parseFloat(x3);
     var y3 = y1.value;
-    y3 = parseInt(y3);
+    y3 = parseFloat(y3);
     var rax3 = rax.value;
-    rax3 = parseInt(rax3);
+    rax3 = parseFloat(rax3);
     var ray3 = ray.value;
-    ray3 = parseInt(ray3);
+    ray3 = parseFloat(ray3);
     var rax2 = -rax3;
     var ray2 = -ray3;
     x3 = x3 + rax2;
@@ -359,11 +359,11 @@ function rotate270() {
 
 function dialate2() {
     var x3 = x1.value;
-    x3 = parseInt(x3);
+    x3 = parseFloat(x3);
     var y3 = y1.value;
-    y3 = parseInt(y3);
+    y3 = parseFloat(y3);
     var k2 = k.value;
-    k2 = parseInt(k2);
+    k2 = parseFloat(k2);
     var xans = x3 * k2;
     var yans = y3 * k2;
     answer.textContent = "Answer: (" + xans + "," + yans + ")";
@@ -371,13 +371,13 @@ function dialate2() {
 
 function vector2() {
     var x3 = x1.value;
-    x3 = parseInt(x3);
+    x3 = parseFloat(x3);
     var y3 = y1.value;
-    y3 = parseInt(y3);
+    y3 = parseFloat(y3);
     var vx2 = vx.value;
-    vx2 = parseInt(vx2);
+    vx2 = parseFloat(vx2);
     var vy2 = vy.value;
-    vy2 = parseInt(vy2);
+    vy2 = parseFloat(vy2);
     var xans = x3 + vx2;
     var yans = y3 + vy2;
     answer.textContent = "Answer: (" + xans + "," + yans + ")";
@@ -385,13 +385,13 @@ function vector2() {
 
 function midpoint() {
     var x3 = x1.value;
-    x3 = parseInt(x3);
+    x3 = parseFloat(x3);
     var y3 = y1.value;
-    y3 = parseInt(y3);
+    y3 = parseFloat(y3);
     var x4 = x2.value;
-    x4 = parseInt(x4);
+    x4 = parseFloat(x4);
     var y4 = y2.value;
-    y4 = parseInt(y4);
+    y4 = parseFloat(y4);
     xans = (x3 + x4) / 2;
     yans = (y3 + y4) / 2;
     answer.textContent = "Answer: (" + xans + "," + yans + ")";
@@ -399,13 +399,13 @@ function midpoint() {
 
 function distance() {
     var x3 = x1.value;
-    x3 = parseInt(x3);
+    x3 = parseFloat(x3);
     var y3 = y1.value;
-    y3 = parseInt(y3);
+    y3 = parseFloat(y3);
     var x4 = x2.value;
-    x4 = parseInt(x4);
+    x4 = parseFloat(x4);
     var y4 = y2.value;
-    y4 = parseInt(y4);
+    y4 = parseFloat(y4);
     var x5 = x3 - x4;
     x5 = x5 * x5;
     var y5 = y3 - y4;
@@ -417,7 +417,7 @@ function distance() {
 }
 
 function sqrt3(sqrt4) {
-    sqrt4 = parseInt(sqrt4);
+    sqrt4 = parseFloat(sqrt4);
     var i = 1;
     var sqr = 1;
     var found = "false";
@@ -492,9 +492,9 @@ function pyththmleg() {
 
 function pyththmleg2() {
     var a3 = a1.value;
-    a3 = parseInt(a3);
+    a3 = parseFloat(a3);
     var c3 = c1.value;
-    c3 = parseInt(c3);
+    c3 = parseFloat(c3);
     c3 = c3 * c3;
     a3 = a3 * a3;
     ans = c3 - a3;
@@ -506,9 +506,9 @@ function pyththmleg2() {
 
 function pyththmhyp2() {
     var a3 = a1.value;
-    a3 = parseInt(a3);
+    a3 = parseFloat(a3);
     var b3 = b1.value;
-    b3 = parseInt(b3);
+    b3 = parseFloat(b3);
     a3 = a3 * a3;
     b3 = b3 * b3;
     ab = a3 + b3;
@@ -549,11 +549,11 @@ function isItTri() {
 
 function isItTri2() {
     var a3 = a1.value;
-    a3 = parseInt(a3);
+    a3 = parseFloat(a3);
     var b3 = b1.value;
-    b3 = parseInt(b3);
+    b3 = parseFloat(b3);
     var c3 = c1.value;
-    c3 = parseInt(c3);
+    c3 = parseFloat(c3);
     if (a3 + b3 > c3 && a3 + c3 > b3 && c3 + b3 > a3) {
         answer.textContent = "It is a triangle ";
         a2 = a3 * a3;
@@ -606,11 +606,11 @@ function quadratics(){
 
 function quadratics2(){
     var a3 = a1.value;
-    a3 = parseInt(a3);
+    a3 = parseFloat(a3);
     var b3 = b1.value;
-    b3 = parseInt(b3);
+    b3 = parseFloat(b3);
     var c3 = c1.value;
-    c3 = parseInt(c3);
+    c3 = parseFloat(c3);
 
     var bsq= b3 * b3;
     console.log(bsq);
