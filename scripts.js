@@ -311,10 +311,11 @@ function sqrt2() {
     vylabel.textContent = "Is the number in the denominator a square root? ex: 5 in the denominator would become √5 ";
     var contvy = document.createElement("input");
     contvy.setAttribute("id", "checkbox");
+    contvy.setAttribute("value" , "sqrt")
     contvy.type = "checkbox";
     container.appendChild(vylabel);
     container.appendChild(contvy);
-    checkbox2 = document.querySelector("#checkbox").is(":checked");
+    checkbox2 = document.querySelector("#checkbox")
 }
 
 function rotate90() {
@@ -441,7 +442,7 @@ function sqrt3(sqrt4) {
     var i = 1;
     var sqr = 1;
     var found = "false";
-    var checkbox = checkbox2;
+    var checkbox = checkbox2.value;
     var denom2 = denom.value;
     denom2 = parseFloat(denom2);
     if (checkbox === false) {
