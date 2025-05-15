@@ -445,7 +445,7 @@ function sqrt3(sqrt4) {
     var checkbox = checkbox2.value;
     var denom2 = denom.value;
     denom2 = parseFloat(denom2);
-    if (checkbox === sqrt) {
+    if (checkbox === "sqrt") {
         while (sqr < sqrt4) {
             i = i + 2;
             sqr = sqr + i;
@@ -462,7 +462,7 @@ function sqrt3(sqrt4) {
                     var ans4 = ans3 + "√" + ans1;
                     var ans5 = Math.sqrt(denom2);
                     var ans6 = ans1 * denom2;
-                    answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans6 + "/ " + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / ans5;
+                    answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans6 + "/" + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / ans5;
                     found = "true";
 
                     break;
