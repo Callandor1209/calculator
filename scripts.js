@@ -444,12 +444,12 @@ function sqrt3(sqrt4) {
     var found = "false";
     var denom2 = denom.value;
     denom2 = parseFloat(denom2);
-    if (checkbox === "sqrt") {
+    if (checkbox2.checked) {
         while (sqr < sqrt4) {
             i = i + 2;
             sqr = sqr + i;
 
-            if (checkbox2.checked) {
+            if (sqr === sqrt4) {
                 answer.textContent = Math.sqrt(sqrt4);
                 return Math.sqrt(sqrt4);
             }
@@ -470,7 +470,7 @@ function sqrt3(sqrt4) {
 
 
             if (found === "false") {
-                answer.textContent = "√" + sqrt4 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / denom2;
+                answer.textContent = "√" + sqrt4 + "/" + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / denom2;
                 return "No simplification";
             }
             return ans4;
@@ -509,13 +509,6 @@ function sqrt3(sqrt4) {
         }
         return ans4;
 
-
-    if (found === "false") {
-        sqrt4 = sqrt4 * denom2;
-        answer.textContent = "√" + sqrt4 + "/" + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / Math.sqrt(denom2);
-        return "No simplification";
-    }
-    return ans4;
 }
 
 
