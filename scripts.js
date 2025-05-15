@@ -314,7 +314,7 @@ function sqrt2() {
     contvy.type = "checkbox";
     container.appendChild(vylabel);
     container.appendChild(contvy);
-    checkbox2 = document.querySelector("#checkbox");
+    checkbox2 = document.querySelector("#checkbox").is(":checked");
 }
 
 function rotate90() {
@@ -441,7 +441,7 @@ function sqrt3(sqrt4) {
     var i = 1;
     var sqr = 1;
     var found = "false";
-    var checkbox = checkbox2.is(":checked")
+    var checkbox = checkbox2;
     var denom2 = denom.value;
     denom2 = parseFloat(denom2);
     if (checkbox === false) {
@@ -474,6 +474,35 @@ function sqrt3(sqrt4) {
         }
         return ans4;
     }
+
+    while (sqr < sqrt4) {
+            i = i + 2;
+            sqr = sqr + i;
+
+            if (sqr === sqrt4) {
+                answer.textContent = Math.sqrt(sqrt4);
+                return Math.sqrt(sqrt4);
+            }
+            switch (sqrt4 % sqr) {
+                case 0:
+                    var ans1 = sqrt4 / sqr;
+                    var ans2 = sqrt4 / ans1;
+                    var ans3 = Math.sqrt(ans2);
+                    var ans4 = ans3 + "√" + ans1;
+                    answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans1 + "/ " + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / denom2;
+                    found = "true";
+
+                    break;
+            }
+        }
+
+
+
+        if (found === "false") {
+            answer.textContent = "√" + sqrt4 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4);
+            return "No simplification";
+        }
+        return ans4;
 }
 
 
