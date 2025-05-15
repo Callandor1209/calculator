@@ -442,7 +442,6 @@ function sqrt3(sqrt4) {
     var i = 1;
     var sqr = 1;
     var found = "false";
-    var checkbox = checkbox2.value;
     var denom2 = denom.value;
     denom2 = parseFloat(denom2);
     if (checkbox === "sqrt") {
@@ -450,7 +449,7 @@ function sqrt3(sqrt4) {
             i = i + 2;
             sqr = sqr + i;
 
-            if (sqr === sqrt4) {
+            if (checkbox2.checked) {
                 answer.textContent = Math.sqrt(sqrt4);
                 return Math.sqrt(sqrt4);
             }
@@ -467,7 +466,7 @@ function sqrt3(sqrt4) {
 
                     break;
             }
-
+        }
 
 
             if (found === "false") {
@@ -475,7 +474,7 @@ function sqrt3(sqrt4) {
                 return "No simplification";
             }
             return ans4;
-        }
+        
     }
 
         console.log("No check");
