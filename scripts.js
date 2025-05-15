@@ -504,7 +504,7 @@ function sqrt3(sqrt4) {
 
         if (found === "false") {
             sqrt4 = sqrt4 * denom2;
-            answer.textContent = "√" + sqrt4 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4)/Math.sqrt(denom2);
+            answer.textContent = "√" + sqrt4 +"/" + denom2 +'\n' + "Estimated answer: " + Math.sqrt(sqrt4)/Math.sqrt(denom2);
             return "No simplification";
         }
         return ans4;
