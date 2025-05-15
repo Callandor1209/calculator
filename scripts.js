@@ -441,7 +441,7 @@ function sqrt3(sqrt4) {
     var i = 1;
     var sqr = 1;
     var found = "false";
-    var checkbox = checkbox2.ischecked();
+    var checkbox = checkbox2.is(":checked")
     var denom2 = denom.value;
     denom2 = parseFloat(denom2);
     if(checkbox === false){
