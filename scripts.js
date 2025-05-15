@@ -453,6 +453,7 @@ function sqrt3(sqrt4) {
                 answer.textContent = Math.sqrt(sqrt4);
                 return Math.sqrt(sqrt4);
             }
+
             switch (sqrt4 % sqr) {
                 case 0:
                     var ans1 = sqrt4 / sqr;
@@ -469,7 +470,7 @@ function sqrt3(sqrt4) {
 
 
         if (found === "false") {
-            answer.textContent = "√" + sqrt4 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4);
+            answer.textContent = "√" + sqrt4 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4)/denom2;
             return "No simplification";
         }
         return ans4;
@@ -489,7 +490,9 @@ function sqrt3(sqrt4) {
                     var ans2 = sqrt4 / ans1;
                     var ans3 = Math.sqrt(ans2);
                     var ans4 = ans3 + "√" + ans1;
-                    answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans1 + "/ " + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / denom2;
+                    var ans5= Math.sqrt(denom2);
+                    var ans6 =  ans1 * denom2;
+                    answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans6 + "/ " +  + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / ans5;
                     found = "true";
 
                     break;
@@ -499,7 +502,8 @@ function sqrt3(sqrt4) {
 
 
         if (found === "false") {
-            answer.textContent = "√" + sqrt4 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4);
+            sqrt4 = sqrt4 * denom2;
+            answer.textContent = "√" + sqrt4 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4)/Math.sqrt(denom2);
             return "No simplification";
         }
         return ans4;
