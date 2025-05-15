@@ -311,7 +311,7 @@ function sqrt2() {
     vylabel.textContent = "Is the number in the denominator a square root? ex: 5 in the denominator would become √5 ";
     var contvy = document.createElement("input");
     contvy.setAttribute("id", "checkbox");
-    contvy.setAttribute("value" , "sqrt")
+    contvy.setAttribute("value", "sqrt")
     contvy.type = "checkbox";
     container.appendChild(vylabel);
     container.appendChild(contvy);
@@ -445,7 +445,61 @@ function sqrt3(sqrt4) {
     var checkbox = checkbox2.value;
     var denom2 = denom.value;
     denom2 = parseFloat(denom2);
-    if (checkbox === false) {
+    if (checkbox === sqrt) {
+        while (sqr < sqrt4) {
+            i = i + 2;
+            sqr = sqr + i;
+
+            if (sqr === sqrt4) {
+                answer.textContent = Math.sqrt(sqrt4);
+                return Math.sqrt(sqrt4);
+            }
+            switch (sqrt4 % sqr) {
+                case 0:
+                    var ans1 = sqrt4 / sqr;
+                    var ans2 = sqrt4 / ans1;
+                    var ans3 = Math.sqrt(ans2);
+                    var ans4 = ans3 + "√" + ans1;
+                    var ans5 = Math.sqrt(denom2);
+                    var ans6 = ans1 * denom2;
+                    answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans6 + "/ " + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / ans5;
+                    found = "true";
+
+                    break;
+            }
+            while (sqr < sqrt4) {
+                i = i + 2;
+                sqr = sqr + i;
+
+                if (sqr === sqrt4) {
+                    answer.textContent = Math.sqrt(sqrt4);
+                    return Math.sqrt(sqrt4);
+                }
+
+                switch (sqrt4 % sqr) {
+                    case 0:
+                        var ans1 = sqrt4 / sqr;
+                        var ans2 = sqrt4 / ans1;
+                        var ans3 = Math.sqrt(ans2);
+                        var ans4 = ans3 + "√" + ans1;
+                        answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans1 + "/ " + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / denom2;
+                        found = "true";
+
+                        break;
+                }
+            }
+
+
+
+            if (found === "false") {
+                answer.textContent = "√" + sqrt4 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / denom2;
+                return "No simplification";
+            }
+            return ans4;
+        }
+
+
+
         while (sqr < sqrt4) {
             i = i + 2;
             sqr = sqr + i;
@@ -471,43 +525,19 @@ function sqrt3(sqrt4) {
 
 
         if (found === "false") {
-            answer.textContent = "√" + sqrt4 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4)/denom2;
+            answer.textContent = "√" + sqrt4 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / denom2;
             return "No simplification";
         }
         return ans4;
     }
 
-    while (sqr < sqrt4) {
-            i = i + 2;
-            sqr = sqr + i;
 
-            if (sqr === sqrt4) {
-                answer.textContent = Math.sqrt(sqrt4);
-                return Math.sqrt(sqrt4);
-            }
-            switch (sqrt4 % sqr) {
-                case 0:
-                    var ans1 = sqrt4 / sqr;
-                    var ans2 = sqrt4 / ans1;
-                    var ans3 = Math.sqrt(ans2);
-                    var ans4 = ans3 + "√" + ans1;
-                    var ans5= Math.sqrt(denom2);
-                    var ans6 =  ans1 * denom2;
-                    answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans6 + "/ " +  + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / ans5;
-                    found = "true";
-
-                    break;
-            }
-        }
-
-
-
-        if (found === "false") {
-            sqrt4 = sqrt4 * denom2;
-            answer.textContent = "√" + sqrt4 +"/" + denom2 +'\n' + "Estimated answer: " + Math.sqrt(sqrt4)/Math.sqrt(denom2);
-            return "No simplification";
-        }
-        return ans4;
+    if (found === "false") {
+        sqrt4 = sqrt4 * denom2;
+        answer.textContent = "√" + sqrt4 + "/" + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / Math.sqrt(denom2);
+        return "No simplification";
+    }
+    return ans4;
 }
 
 
