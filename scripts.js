@@ -314,7 +314,7 @@ function sqrt2() {
     contvy.type = "checkbox";
     container.appendChild(vylabel);
     container.appendChild(contvy);
-    checkbox2 = document.querySelector("#checkbox");    
+    checkbox2 = document.querySelector("#checkbox");
 }
 
 function rotate90() {
@@ -444,36 +444,36 @@ function sqrt3(sqrt4) {
     var checkbox = checkbox2.is(":checked")
     var denom2 = denom.value;
     denom2 = parseFloat(denom2);
-    if(checkbox === false){
-    while (sqr < sqrt4) {
-        i = i + 2;
-        sqr = sqr + i;
+    if (checkbox === false) {
+        while (sqr < sqrt4) {
+            i = i + 2;
+            sqr = sqr + i;
 
-        if (sqr === sqrt4) {
-            answer.textContent = Math.sqrt(sqrt4);
-            return Math.sqrt(sqrt4);
+            if (sqr === sqrt4) {
+                answer.textContent = Math.sqrt(sqrt4);
+                return Math.sqrt(sqrt4);
+            }
+            switch (sqrt4 % sqr) {
+                case 0:
+                    var ans1 = sqrt4 / sqr;
+                    var ans2 = sqrt4 / ans1;
+                    var ans3 = Math.sqrt(ans2);
+                    var ans4 = ans3 + "√" + ans1;
+                    answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans1 + "/ " + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / denom2;
+                    found = "true";
+
+                    break;
+            }
         }
-        switch (sqrt4 % sqr) {
-            case 0:
-                var ans1 = sqrt4 / sqr;
-                var ans2 = sqrt4 / ans1;
-                var ans3 = Math.sqrt(ans2);
-                var ans4 = ans3 + "√" + ans1;
-                answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans1  + "/ " + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / denom2;
-                found = "true";
 
-                break;
+
+
+        if (found === "false") {
+            answer.textContent = "√" + sqrt4 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4);
+            return "No simplification";
         }
+        return ans4;
     }
-    
-
-
-    if (found === "false") {
-        answer.textContent = "√" + sqrt4 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4);
-        return "No simplification";
-    }
-    return ans4;
-}
 }
 
 
@@ -602,7 +602,7 @@ function isItTri2() {
     }
 }
 
-function quadratics(){
+function quadratics() {
     var x1label = document.createElement("label");
     x1label.textContent = "a: ";
     var contx1 = document.createElement("input");
@@ -632,7 +632,7 @@ function quadratics(){
     c1 = document.querySelector("#c");
 }
 
-function quadratics2(){
+function quadratics2() {
     var a3 = a1.value;
     a3 = parseFloat(a3);
     var b3 = b1.value;
@@ -640,7 +640,7 @@ function quadratics2(){
     var c3 = c1.value;
     c3 = parseFloat(c3);
 
-    var bsq= b3 * b3;
+    var bsq = b3 * b3;
     console.log(bsq);
     var ac4 = -4 * a3 * c3;
     console.log(ac4);
@@ -649,11 +649,11 @@ function quadratics2(){
     var oppb = b3 * -1;
     console.log(oppb);
     var tobesqrt = bsq + ac4;
-    if(tobesqrt<0){
+    if (tobesqrt < 0) {
         tobesqrt = tobesqrt * -1;
         sqrt10 = Math.sqrt(tobesqrt);
-        sqrt10 = sqrt10/a2;
-        oppb = oppb/a2;
+        sqrt10 = sqrt10 / a2;
+        oppb = oppb / a2;
         answer.textContent = "Answer: " + oppb + " ±  " + sqrt10 + "i";
         return;
     }
