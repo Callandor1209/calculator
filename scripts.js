@@ -467,27 +467,6 @@ function sqrt3(sqrt4) {
 
                     break;
             }
-            while (sqr < sqrt4) {
-                i = i + 2;
-                sqr = sqr + i;
-
-                if (sqr === sqrt4) {
-                    answer.textContent = Math.sqrt(sqrt4);
-                    return Math.sqrt(sqrt4);
-                }
-
-                switch (sqrt4 % sqr) {
-                    case 0:
-                        var ans1 = sqrt4 / sqr;
-                        var ans2 = sqrt4 / ans1;
-                        var ans3 = Math.sqrt(ans2);
-                        var ans4 = ans3 + "√" + ans1;
-                        answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans1 + "/ " + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / denom2;
-                        found = "true";
-
-                        break;
-                }
-            }
 
 
 
@@ -497,8 +476,9 @@ function sqrt3(sqrt4) {
             }
             return ans4;
         }
+    }
 
-
+        console.log("No check");
 
         while (sqr < sqrt4) {
             i = i + 2;
@@ -529,7 +509,6 @@ function sqrt3(sqrt4) {
             return "No simplification";
         }
         return ans4;
-    }
 
 
     if (found === "false") {
