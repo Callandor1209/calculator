@@ -577,7 +577,7 @@ function pyththmleg2() {
     ans = c3 - a3;
     ans2 = Math.sqrt(ans);
     answer.textContent = "Answer: " + ans2 + " , √" + ans;
-    answer.textContent = answer.textContent + '\n' + sqrt3(ans);
+    answer.textContent = answer.textContent + '\n' + sqrt3(ans,1);
 
 }
 
