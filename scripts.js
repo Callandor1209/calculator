@@ -458,10 +458,10 @@ function sqrt3(sqrt4, x) {
                 case 0:
                     var ans1 = sqrt4 / sqr;
                     var ans2 = sqrt4 / ans1;
-                    var ans3 = Math.sqrt(ans2);
+                    var ans7 = Math.sqrt(ans2);
 
-                    var ans4 = ans3 + "√" + ans1;
-                    ans3 = ans3 * x;
+                    var ans4 = ans7 + "√" + ans1;
+                    var ans3 = ans7 * x;
                     var ans5 = Math.sqrt(denom2);
                     var ans6 = ans1 * denom2;
                     answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans6 + "/" + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / ans5;
