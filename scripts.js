@@ -123,7 +123,7 @@ function doMath() {
             break;
 
         case "sqrt":
-            sqrt3(sqrt.value);
+            sqrt3(sqrt.value,1);
             break;
 
         case "pyththmleg":
@@ -438,7 +438,7 @@ function distance() {
 
 }
 
-function sqrt3(sqrt4, x = 1) {
+function sqrt3(sqrt4, x) {
     sqrt4 = parseFloat(sqrt4);
     var i = 1;
     var sqr = 1;
@@ -483,6 +483,7 @@ function sqrt3(sqrt4, x = 1) {
             return "No simplification";
         }
         if (y < 1) {
+            console.log(ans6);
             y++;
             sqrt3(ans6, ans3);
         }
@@ -590,7 +591,7 @@ function pyththmhyp2() {
     ab = a3 + b3;
     ans = Math.sqrt(ab);
     answer.textContent = "Answer: " + ans + " , √" + ab;
-    answer.textContent = answer.textContent + '\n' + sqrt3(ab);
+    answer.textContent = answer.textContent + '\n' + sqrt3(ab,1);
 }
 
 function isItTri() {
