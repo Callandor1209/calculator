@@ -123,7 +123,7 @@ function doMath() {
             break;
 
         case "sqrt":
-            sqrt3(sqrt.value,1);
+            sqrt3(sqrt.value);
             break;
 
         case "pyththmleg":
@@ -291,7 +291,7 @@ function vector() {
 
 function sqrt2() {
     var sqrtlabel = document.createElement("label");
-    sqrtlabel.textContent = "Number to square root: ";
+    sqrtlabel.textContent = "Numerator(is assumed to be a squareroot) ex 5 will be √5: ";
     var contsqrt = document.createElement("input");
     contsqrt.setAttribute("id", "sqrt");
     contsqrt.type = "text";
@@ -563,7 +563,7 @@ function pyththmleg2() {
     ans = c3 - a3;
     ans2 = Math.sqrt(ans);
     answer.textContent = "Answer: " + ans2 + " , √" + ans;
-    answer.textContent = answer.textContent + '\n' + sqrt3(ans,1);
+    answer.textContent = answer.textContent + '\n' + sqrt3(ans);
 
 }
 
@@ -577,7 +577,7 @@ function pyththmhyp2() {
     ab = a3 + b3;
     ans = Math.sqrt(ab);
     answer.textContent = "Answer: " + ans + " , √" + ab;
-    answer.textContent = answer.textContent + '\n' + sqrt3(ab,1);
+    answer.textContent = answer.textContent + '\n' + sqrt3(ab);
 }
 
 function isItTri() {
