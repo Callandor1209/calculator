@@ -438,7 +438,7 @@ function distance() {
 
 }
 
-function sqrt3(sqrt4, x) {
+function sqrt3(sqrt4) {
     sqrt4 = parseFloat(sqrt4);
     var i = 1;
     var sqr = 1;
@@ -446,50 +446,36 @@ function sqrt3(sqrt4, x) {
     var denom2 = denom.value;
     denom2 = parseFloat(denom2);
     if (checkbox2.checked) {
-        while (sqr < sqrt4) {
+        sqrt4 = sqrt4 * denom2;
+        while(sqr < sqrt4){
             i = i + 2;
             sqr = sqr + i;
-
             if (sqr === sqrt4) {
-                answer.textContent = Math.sqrt(sqrt4);
-                return Math.sqrt(sqrt4);
+                answer.textContent = Math.sqrt(sqrt4)/ denom2;
+                return Math.sqrt(sqrt4/ denom2);
             }
-            switch (sqrt4 % sqr) {
+    
+            
+            switch (sqrt4 % sqr){
                 case 0:
                     var ans1 = sqrt4 / sqr;
                     var ans2 = sqrt4 / ans1;
-                    var ans7 = Math.sqrt(ans2);
-
-                    var ans4 = ans7 + "√" + ans1;
-                    var ans3 = ans7 * x;
-                    var ans5 = Math.sqrt(denom2);
-                    var ans6 = ans1 * denom2;
-                    answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans6 + "/" + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / ans5;
+                    var ans3 = Math.sqrt(ans2);
+                    var ans4 = ans3 + "√" + ans1;
+                    answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans1 + "/" + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4*denom2) / Math.sqrt(denom2);
                     found = "true";
 
-                    break;
+                    break
+
             }
         }
-
-
         if (found === "false") {
-
-            answer.textContent = "√" + sqrt4 * denom2 + "/" + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / denom2;
-            if (y < 1) {
-                y++;
-                console.log(ans6)
-                sqrt3(ans6, ans3);
-            }
+            answer.textContent = "√" + sqrt4 + "/" + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4) / Math.sqrt(denom2);
             return "No simplification";
         }
-        if (y < 1) {
-            console.log(ans6);
-            y++;
-            sqrt3(ans6, ans3);
-        }
         return ans4;
-
     }
+       
 
     console.log("No check");
 
@@ -498,8 +484,8 @@ function sqrt3(sqrt4, x) {
         sqr = sqr + i;
 
         if (sqr === sqrt4) {
-            answer.textContent = Math.sqrt(sqrt4);
-            return Math.sqrt(sqrt4);
+            answer.textContent = Math.sqrt(sqrt4)/denom2;
+            return Math.sqrt(sqrt4/denom2);
         }
 
         switch (sqrt4 % sqr) {
