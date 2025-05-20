@@ -830,7 +830,7 @@ function SOHCAHTOA2(){
 function tan(degrees){
     return Math.tan(degrees * Math.PI)/100;
 }
-function cosine(degrees){
+function cos(degrees){
     return Math.cos(degrees * Math.PI)/100;
 }
 function sine(){
