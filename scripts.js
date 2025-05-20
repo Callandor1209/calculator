@@ -146,7 +146,7 @@ function doMath() {
             break;
 
         case "SOHCAHTOA":
-            SOHCAHTOA2;
+            SOHCAHTOA2();
             break;
     }
 }
@@ -721,14 +721,15 @@ function SOHCAHTOA(){
     container.appendChild(contx1);
     a1 = document.querySelector("#a");
 
-    var y1label = document.createElement("label");
-    y1label.textContent = "b: ";
-    var conty1 = document.createElement("input");
-    conty1.setAttribute("id", "b");
-    conty1.type = "text";
-    container.appendChild(y1label);
-    container.appendChild(conty1);
-    b1 = document.querySelector("#b");
+
+    var dialatelabel = document.createElement("label");
+    dialatelabel.textContent = "c: "
+    var contdialate = document.createElement("input");
+    contdialate.setAttribute("id", "c");
+    contdialate.type = "text";
+    container.appendChild(dialatelabel);
+    container.appendChild(contdialate);
+    c1 = document.querySelector("#c");
 
     var y1label = document.createElement("label");
     y1label.textContent = "ab: ";
@@ -740,14 +741,6 @@ function SOHCAHTOA(){
     ab1 = document.querySelector("#ab");
 
 
-    var dialatelabel = document.createElement("label");
-    dialatelabel.textContent = "c: "
-    var contdialate = document.createElement("input");
-    contdialate.setAttribute("id", "c");
-    contdialate.type = "text";
-    container.appendChild(dialatelabel);
-    container.appendChild(contdialate);
-    c1 = document.querySelector("#c");
 
         var x1label = document.createElement("label");
     x1label.textContent = "bc: ";
@@ -801,8 +794,8 @@ function SOHCAHTOA2(){
         
     }
         if(a3!=0 && ac3!=0){
-        ab3 = bc3 * tan(a3);
-        ac3 = bc3 * cos(a3);
+        bc3 = ac3 * sine(a3);
+        ab3 = ac3 * cos(a3);
         b3 = 90;
         c3 = 180 - (a3+b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
@@ -810,8 +803,25 @@ function SOHCAHTOA2(){
     }
 
         if(c3!=0 && ac3!=0){
-        ab3 = ac3 * tan(a3);
-        ac3 = ac3 * cos(a3);
+        ab3 = ac3 * sine(a3);
+        bc3 = ac3 * cos(a3);
+        b3 = 90;
+        a3 = 180 - (c3+b3);
+        answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+        
+    }
+            if(a3!=0 && bc3!=0){
+        ab3 = bc3 / tan(a3);
+        ac3 = bc3 * sine(a3);
+        b3 = 90;
+        c3 = 180 - (a3+b3);
+        answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+
+    }
+
+        if(c3!=0 && bc3!=0){
+        ac3 = bc3 / sine(a3);
+        ab3 = bc3 * tan(a3);
         b3 = 90;
         a3 = 180 - (c3+b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
