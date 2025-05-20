@@ -571,6 +571,7 @@ function pyththmleg2() {
     ans2 = Math.sqrt(ans);
     answer.textContent = "Answer: " + ans2 + " , √" + ans;
     answer.textContent = answer.textContent + '\n' + sqrt3(ans);
+    return sqrt3(ans);
 
 }
 
@@ -585,6 +586,7 @@ function pyththmhyp2() {
     ans = Math.sqrt(ab);
     answer.textContent = "Answer: " + ans + " , √" + ab;
     answer.textContent = answer.textContent + '\n' + sqrt3(ab);
+    return sqrt3(ab);
 }
 
 function isItTri() {
@@ -772,6 +774,7 @@ function SOHCAHTOA2(){
     a3 = parseFloat(a3);
     var c3 = c1.value;
     c3 = parseFloat(c3);
+    var b3 = 90;
     var bc3 = bc1.value;
     bc3 = parseFloat(bc3);
     var ab3 = ab1.value;
@@ -830,8 +833,41 @@ function SOHCAHTOA2(){
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
         
     }
-    if(bc3 != ac3){
-
+    if(bc3 !=  0 && ac3 != 0){
+        var c4 = ac3;
+        var a4 = bc3
+    c4 = c4 * c4;
+    a4 = a4 * a4;
+    ans = c4 - a4;
+    ans2 = Math.sqrt(ans);
+        ab3 = ans2;
+        c3 = cosinv(bc3/ac3);
+        a3= sineinv(bc3/ac3);
+        answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+    }
+        if(ab3 !=  0 && ac3 != 0){
+        var c4 = ac3;
+        var a4 = ab3
+    c4 = c4 * c4;
+    a4 = a4 * a4;
+    ans = c4 - a4;
+    ans2 = Math.sqrt(ans);
+        bc3 = ans2;
+        c3 = cosinv(bc3/ac3);
+        a3= sineinv(bc3/ac3);
+        answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+    }
+            if(ab3 !=  0 && bc3 != 0){
+        var c4 = ac3;
+        var a4 = bc3;
+    c4 = c4 * c4;
+    a4 = a4 * a4;
+    ans = c4 + a4;
+    ans2 = Math.sqrt(ans);
+        ac3 = ans2;
+        c3 = cosinv(bc3/ac3);
+        a3= sineinv(bc3/ac3);
+        answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
     }
 
 }
@@ -849,7 +885,10 @@ function sineinv(degrees){
     return Math.asin(degrees * Math.PI)/100;
 }
 function cosinv(degrees){
-    
+    return Math.acos(degrees * Math.PI)/100
+}
+function taninv(degrees){
+return Math.atan(degrees *Math.PI)/100
 }
 function darkmode() {
     var element = document.body;
