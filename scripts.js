@@ -716,6 +716,7 @@ function SOHCAHTOA(){
     x1label.textContent = "a: ";
     var contx1 = document.createElement("input");
     contx1.setAttribute("id", "a");
+    contx1.setAttribute("value", 0);
     contx1.type = "text";
     container.appendChild(x1label);
     container.appendChild(contx1);
@@ -726,6 +727,7 @@ function SOHCAHTOA(){
     dialatelabel.textContent = "c: "
     var contdialate = document.createElement("input");
     contdialate.setAttribute("id", "c");
+       contdialate.setAttribute("value", 0);
     contdialate.type = "text";
     container.appendChild(dialatelabel);
     container.appendChild(contdialate);
@@ -735,6 +737,7 @@ function SOHCAHTOA(){
     y1label.textContent = "ab: ";
     var conty1 = document.createElement("input");
     conty1.setAttribute("id", "ab");
+          conty1.setAttribute("value", 0);
     conty1.type = "text";
     container.appendChild(y1label);
     container.appendChild(conty1);
@@ -746,6 +749,7 @@ function SOHCAHTOA(){
     x1label.textContent = "bc: ";
     var contx1 = document.createElement("input");
     contx1.setAttribute("id", "bc");
+           contx1.setAttribute("value", 0);
     contx1.type = "text";
     container.appendChild(x1label);
     container.appendChild(contx1);
@@ -756,6 +760,7 @@ function SOHCAHTOA(){
     dialatelabel.textContent = "ac: "
     var contdialate = document.createElement("input");
     contdialate.setAttribute("id", "ac");
+           contdialate.setAttribute("value", 0);
     contdialate.type = "text";
     container.appendChild(dialatelabel);
     container.appendChild(contdialate);
@@ -825,6 +830,10 @@ function SOHCAHTOA2(){
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
         
     }
+    if(bc3 != ac3){
+
+    }
+
 }
 
 function tan(degrees){
@@ -833,8 +842,14 @@ function tan(degrees){
 function cos(degrees){
     return Math.cos(degrees * Math.PI)/100;
 }
-function sine(){
-    return Math.sine(degrees * Math.PI)/100;
+function sine(degrees){
+    return Math.sin(degrees * Math.PI)/100;
+}
+function sineinv(degrees){
+    return Math.asin(degrees * Math.PI)/100;
+}
+function cosinv(degrees){
+    
 }
 function darkmode() {
     var element = document.body;
