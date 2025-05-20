@@ -82,6 +82,9 @@ function getResult() {
         case "quadratics":
             quadratics();
             break;
+
+        case "SOHCAHTOA":
+        SOHCAHTOA();
     }
 
     const submitbutton2 = document.createElement("button");
@@ -140,6 +143,10 @@ function doMath() {
 
         case "quadratics":
             quadratics2();
+            break;
+
+        case "SOHCAHTOA":
+            SOHCAHTOA2;
             break;
     }
 }
@@ -704,6 +711,123 @@ function quadratics2() {
     answer.textContent = "Answer: " + ans1 + " , " + ans2;
 }
 
+function SOHCAHTOA(){
+    var x1label = document.createElement("label");
+    x1label.textContent = "a: ";
+    var contx1 = document.createElement("input");
+    contx1.setAttribute("id", "a");
+    contx1.type = "text";
+    container.appendChild(x1label);
+    container.appendChild(contx1);
+    a1 = document.querySelector("#a");
+
+    var y1label = document.createElement("label");
+    y1label.textContent = "b: ";
+    var conty1 = document.createElement("input");
+    conty1.setAttribute("id", "b");
+    conty1.type = "text";
+    container.appendChild(y1label);
+    container.appendChild(conty1);
+    b1 = document.querySelector("#b");
+
+    var y1label = document.createElement("label");
+    y1label.textContent = "ab: ";
+    var conty1 = document.createElement("input");
+    conty1.setAttribute("id", "ab");
+    conty1.type = "text";
+    container.appendChild(y1label);
+    container.appendChild(conty1);
+    ab1 = document.querySelector("#ab");
+
+
+    var dialatelabel = document.createElement("label");
+    dialatelabel.textContent = "c: "
+    var contdialate = document.createElement("input");
+    contdialate.setAttribute("id", "c");
+    contdialate.type = "text";
+    container.appendChild(dialatelabel);
+    container.appendChild(contdialate);
+    c1 = document.querySelector("#c");
+
+        var x1label = document.createElement("label");
+    x1label.textContent = "bc: ";
+    var contx1 = document.createElement("input");
+    contx1.setAttribute("id", "bc");
+    contx1.type = "text";
+    container.appendChild(x1label);
+    container.appendChild(contx1);
+    bc1 = document.querySelector("#bc");
+
+
+    var dialatelabel = document.createElement("label");
+    dialatelabel.textContent = "ac: "
+    var contdialate = document.createElement("input");
+    contdialate.setAttribute("id", "ac");
+    contdialate.type = "text";
+    container.appendChild(dialatelabel);
+    container.appendChild(contdialate);
+    ac1 = document.querySelector("#ac");
+}
+
+function SOHCAHTOA2(){
+    var a3 = a1.value;
+    a3 = parseFloat(a3);
+    var b3 = b1.value;
+    b3 = parseFloat(b3);
+    var c3 = c1.value;
+    c3 = parseFloat(c3);
+    var bc3 = bc1.value;
+    bc3 = parseFloat(bc3);
+    var ab3 = ab1.value;
+    ab3 = parseFloat(ab3);
+    var ac3 = ac1.value;
+    ac3 = parseFloat(ac3);
+
+    if(a3!=0 && bc3!=0){
+        ab3 = bc3 / tan(a3);
+        ac3 = bc3 / cos(a3);
+        b3 = 90;
+        c3 = 180 - (a3+b3);
+        answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+
+    }
+
+        if(c3!=0 && bc3!=0){
+        ab3 = bc3 * tan(a3);
+        ac3 = bc3 * cos(a3);
+        b3 = 90;
+        a3 = 180 - (c3+b3);
+        answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+        
+    }
+        if(a3!=0 && ac3!=0){
+        ab3 = bc3 * tan(a3);
+        ac3 = bc3 * cos(a3);
+        b3 = 90;
+        c3 = 180 - (a3+b3);
+        answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+
+    }
+
+        if(c3!=0 && ac3!=0){
+        ab3 = ac3 * tan(a3);
+        ac3 = ac3 * cos(a3);
+        b3 = 90;
+        a3 = 180 - (c3+b3);
+        answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+        
+    }
+}
+
+function tan(degrees){
+    return Math.tan(degrees * Math.PI)/100;
+}
+function cosine(degrees){
+    return Math.cos(degrees * Math.PI)/100;
+}
+function sine(){
+    return Math.sine(degrees * Math.PI)/100;
+}
 function darkmode() {
     var element = document.body;
     element.classList.toggle("darkmode");
