@@ -788,6 +788,7 @@ function SOHCAHTOA2(){
         b3 = 90;
         c3 = 180 - (a3+b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+        return;
 
     }
 
@@ -797,7 +798,7 @@ function SOHCAHTOA2(){
         b3 = 90;
         a3 = 180 - (c3+b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
-        
+                return;
     }
         if(a3!=0 && ac3!=0){
         bc3 = ac3 * sine(a3);
@@ -805,7 +806,7 @@ function SOHCAHTOA2(){
         b3 = 90;
         c3 = 180 - (a3+b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
-
+        return;
     }
 
         if(c3!=0 && ac3!=0){
@@ -814,7 +815,7 @@ function SOHCAHTOA2(){
         b3 = 90;
         a3 = 180 - (c3+b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
-        
+                return;
     }
             if(a3!=0 && bc3!=0){
         ab3 = bc3 / tan(a3);
@@ -822,7 +823,7 @@ function SOHCAHTOA2(){
         b3 = 90;
         c3 = 180 - (a3+b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
-
+        return;
     }
 
         if(c3!=0 && bc3!=0){
@@ -831,7 +832,7 @@ function SOHCAHTOA2(){
         b3 = 90;
         a3 = 180 - (c3+b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
-        
+                return;
     }
     if(bc3 !=  0 && ac3 != 0){
         var c4 = ac3;
@@ -844,6 +845,7 @@ function SOHCAHTOA2(){
         c3 = cosinv(bc3/ac3);
         a3= sineinv(bc3/ac3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+            return;
     }
         if(ab3 !=  0 && ac3 != 0){
         var c4 = ac3;
@@ -856,6 +858,7 @@ function SOHCAHTOA2(){
         c3 = cosinv(bc3/ac3);
         a3= sineinv(bc3/ac3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+            return;
     }
             if(ab3 !=  0 && bc3 != 0){
         var c4 = ac3;
@@ -868,6 +871,7 @@ function SOHCAHTOA2(){
         c3 = cosinv(bc3/ac3);
         a3= sineinv(bc3/ac3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+            return;
     }
 
 }
