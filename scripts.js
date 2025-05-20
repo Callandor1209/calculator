@@ -765,8 +765,6 @@ function SOHCAHTOA(){
 function SOHCAHTOA2(){
     var a3 = a1.value;
     a3 = parseFloat(a3);
-    var b3 = b1.value;
-    b3 = parseFloat(b3);
     var c3 = c1.value;
     c3 = parseFloat(c3);
     var bc3 = bc1.value;
