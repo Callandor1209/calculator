@@ -84,7 +84,7 @@ function getResult() {
             break;
 
         case "SOHCAHTOA":
-        SOHCAHTOA();
+            SOHCAHTOA();
     }
 
     const submitbutton2 = document.createElement("button");
@@ -454,22 +454,22 @@ function sqrt3(sqrt4) {
     denom2 = parseFloat(denom2);
     if (checkbox2.checked) {
         sqrt4 = sqrt4 * denom2;
-        while(sqr < sqrt4){
+        while (sqr < sqrt4) {
             i = i + 2;
             sqr = sqr + i;
             if (sqr === sqrt4) {
-                answer.textContent = Math.sqrt(sqrt4)/ denom2;
-                return Math.sqrt(sqrt4/ denom2);
+                answer.textContent = Math.sqrt(sqrt4) / denom2;
+                return Math.sqrt(sqrt4 / denom2);
             }
-    
-            
-            switch (sqrt4 % sqr){
+
+
+            switch (sqrt4 % sqr) {
                 case 0:
                     var ans1 = sqrt4 / sqr;
                     var ans2 = sqrt4 / ans1;
                     var ans3 = Math.sqrt(ans2);
                     var ans4 = ans3 + "√" + ans1;
-                    answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans1 + "/" + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4*denom2) / Math.sqrt(denom2);
+                    answer.textContent = "Answer: " + ans2 + " , " + ans1 + '\n' + "True answer: " + ans3 + "√" + ans1 + "/" + denom2 + '\n' + "Estimated answer: " + Math.sqrt(sqrt4 * denom2) / Math.sqrt(denom2);
                     found = "true";
 
                     break
@@ -482,7 +482,7 @@ function sqrt3(sqrt4) {
         }
         return ans4;
     }
-       
+
 
     console.log("No check");
 
@@ -491,8 +491,8 @@ function sqrt3(sqrt4) {
         sqr = sqr + i;
 
         if (sqr === sqrt4) {
-            answer.textContent = Math.sqrt(sqrt4)/denom2;
-            return Math.sqrt(sqrt4/denom2);
+            answer.textContent = Math.sqrt(sqrt4) / denom2;
+            return Math.sqrt(sqrt4 / denom2);
         }
 
         switch (sqrt4 % sqr) {
@@ -713,7 +713,7 @@ function quadratics2() {
     answer.textContent = "Answer: " + ans1 + " , " + ans2;
 }
 
-function SOHCAHTOA(){
+function SOHCAHTOA() {
     var x1label = document.createElement("label");
     x1label.textContent = "a: ";
     var contx1 = document.createElement("input");
@@ -729,7 +729,7 @@ function SOHCAHTOA(){
     dialatelabel.textContent = "c: "
     var contdialate = document.createElement("input");
     contdialate.setAttribute("id", "c");
-       contdialate.setAttribute("value", 0);
+    contdialate.setAttribute("value", 0);
     contdialate.type = "text";
     container.appendChild(dialatelabel);
     container.appendChild(contdialate);
@@ -739,7 +739,7 @@ function SOHCAHTOA(){
     y1label.textContent = "ab: ";
     var conty1 = document.createElement("input");
     conty1.setAttribute("id", "ab");
-          conty1.setAttribute("value", 0);
+    conty1.setAttribute("value", 0);
     conty1.type = "text";
     container.appendChild(y1label);
     container.appendChild(conty1);
@@ -747,11 +747,11 @@ function SOHCAHTOA(){
 
 
 
-        var x1label = document.createElement("label");
+    var x1label = document.createElement("label");
     x1label.textContent = "bc: ";
     var contx1 = document.createElement("input");
     contx1.setAttribute("id", "bc");
-           contx1.setAttribute("value", 0);
+    contx1.setAttribute("value", 0);
     contx1.type = "text";
     container.appendChild(x1label);
     container.appendChild(contx1);
@@ -762,14 +762,14 @@ function SOHCAHTOA(){
     dialatelabel.textContent = "ac: "
     var contdialate = document.createElement("input");
     contdialate.setAttribute("id", "ac");
-           contdialate.setAttribute("value", 0);
+    contdialate.setAttribute("value", 0);
     contdialate.type = "text";
     container.appendChild(dialatelabel);
     container.appendChild(contdialate);
     ac1 = document.querySelector("#ac");
 }
 
-function SOHCAHTOA2(){
+function SOHCAHTOA2() {
     var a3 = a1.value;
     a3 = parseFloat(a3);
     var c3 = c1.value;
@@ -782,117 +782,117 @@ function SOHCAHTOA2(){
     var ac3 = ac1.value;
     ac3 = parseFloat(ac3);
 
-    if(a3!=0 && bc3!=0){
+    if (a3 != 0 && bc3 != 0) {
         ab3 = bc3 / tan(a3);
         ac3 = bc3 / cos(a3);
         b3 = 90;
-        c3 = 180 - (a3+b3);
+        c3 = 180 - (a3 + b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
         return;
 
     }
 
-        if(c3!=0 && bc3!=0){
+    if (c3 != 0 && bc3 != 0) {
         ab3 = bc3 * tan(a3);
         ac3 = bc3 * cos(a3);
         b3 = 90;
-        a3 = 180 - (c3+b3);
+        a3 = 180 - (c3 + b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
-                return;
+        return;
     }
-        if(a3!=0 && ac3!=0){
+    if (a3 != 0 && ac3 != 0) {
         bc3 = ac3 * sine(a3);
         ab3 = ac3 * cos(a3);
         b3 = 90;
-        c3 = 180 - (a3+b3);
+        c3 = 180 - (a3 + b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
         return;
     }
 
-        if(c3!=0 && ac3!=0){
+    if (c3 != 0 && ac3 != 0) {
         ab3 = ac3 * sine(a3);
         bc3 = ac3 * cos(a3);
         b3 = 90;
-        a3 = 180 - (c3+b3);
+        a3 = 180 - (c3 + b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
-                return;
+        return;
     }
-            if(a3!=0 && bc3!=0){
-        ab3 = bc3 / tan(a3);
-        ac3 = bc3 * sine(a3);
+    if (a3 != 0 && ab3 != 0) {
+        ab3 = ab3 / tan(a3);
+        ac3 = ab3 * sine(a3);
         b3 = 90;
-        c3 = 180 - (a3+b3);
+        c3 = 180 - (a3 + b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
         return;
     }
 
-        if(c3!=0 && bc3!=0){
+    if (c3 != 0 && bc3 != 0) {
         ac3 = bc3 / sine(a3);
         ab3 = bc3 * tan(a3);
         b3 = 90;
-        a3 = 180 - (c3+b3);
+        a3 = 180 - (c3 + b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
-                return;
+        return;
     }
-    if(bc3 !=  0 && ac3 != 0){
+    if (bc3 != 0 && ac3 != 0) {
         var c4 = ac3;
         var a4 = bc3
-    c4 = c4 * c4;
-    a4 = a4 * a4;
-    ans = c4 - a4;
-    ans2 = Math.sqrt(ans);
+        c4 = c4 * c4;
+        a4 = a4 * a4;
+        ans = c4 - a4;
+        ans2 = Math.sqrt(ans);
         ab3 = ans2;
-        c3 = cosinv(bc3/ac3);
-        a3= sineinv(bc3/ac3);
+        c3 = cosinv(bc3 / ac3);
+        a3 = sineinv(bc3 / ac3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
-            return;
+        return;
     }
-        if(ab3 !=  0 && ac3 != 0){
+    if (ab3 != 0 && ac3 != 0) {
         var c4 = ac3;
         var a4 = ab3
-    c4 = c4 * c4;
-    a4 = a4 * a4;
-    ans = c4 - a4;
-    ans2 = Math.sqrt(ans);
+        c4 = c4 * c4;
+        a4 = a4 * a4;
+        ans = c4 - a4;
+        ans2 = Math.sqrt(ans);
         bc3 = ans2;
-        c3 = cosinv(bc3/ac3);
-        a3= sineinv(bc3/ac3);
+        c3 = cosinv(bc3 / ac3);
+        a3 = sineinv(bc3 / ac3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
-            return;
+        return;
     }
-            if(ab3 !=  0 && bc3 != 0){
+    if (ab3 != 0 && bc3 != 0) {
         var c4 = ac3;
         var a4 = bc3;
-    c4 = c4 * c4;
-    a4 = a4 * a4;
-    ans = c4 + a4;
-    ans2 = Math.sqrt(ans);
+        c4 = c4 * c4;
+        a4 = a4 * a4;
+        ans = c4 + a4;
+        ans2 = Math.sqrt(ans);
         ac3 = ans2;
-        c3 = cosinv(bc3/ac3);
-        a3= sineinv(bc3/ac3);
+        c3 = cosinv(bc3 / ac3);
+        a3 = sineinv(bc3 / ac3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
-            return;
+        return;
     }
 
 }
 
-function tan(degrees){
-    return Math.tan(degrees * Math.PI)/100;
+function tan(degrees) {
+    return Math.tan(degrees * Math.PI/180);
 }
-function cos(degrees){
-    return Math.cos(degrees * Math.PI)/100;
+function cos(degrees) {
+    return Math.cos(degrees * Math.PI/180);
 }
-function sine(degrees){
-    return Math.sin(degrees * Math.PI)/100;
+function sine(degrees) {
+    return Math.sin(degrees * Math.PI/180);
 }
-function sineinv(degrees){
-    return Math.asin(degrees * Math.PI)/100;
+function sineinv(degrees) {
+    return Math.asin(degrees * Math.PI/180);
 }
-function cosinv(degrees){
-    return Math.acos(degrees * Math.PI)/100
+function cosinv(degrees) {
+    return Math.acos(degrees * Math.PI/180);
 }
-function taninv(degrees){
-return Math.atan(degrees *Math.PI)/100
+function taninv(degrees) {
+    return Math.atan(degrees * Math.PI/180);
 }
 function darkmode() {
     var element = document.body;
