@@ -819,7 +819,7 @@ function SOHCAHTOA2() {
         return;
     }
     if (a3 != 0 && ab3 != 0) {
-        ab3 = ab3 * tan(a3);
+        bc3 = ab3 * tan(a3);
         ac3 = ab3 / cos(a3);
         b3 = 90;
         c3 = 180 - (a3 + b3);
