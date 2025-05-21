@@ -794,8 +794,8 @@ function SOHCAHTOA2() {
     }
 
     if (c3 != 0 && bc3 != 0) {
-        ab3 = bc3 * tan(a3);
-        ac3 = bc3 * cos(a3);
+        ab3 = bc3 * tan(c3);
+        ac3 = bc3 * cos(c3);
         b3 = 90;
         a3 = 180 - (c3 + b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
@@ -811,8 +811,8 @@ function SOHCAHTOA2() {
     }
 
     if (c3 != 0 && ac3 != 0) {
-        ab3 = ac3 * sine(a3);
-        bc3 = ac3 * cos(a3);
+        ab3 = ac3 * sine(c3);
+        bc3 = ac3 * cos(c3);
         b3 = 90;
         a3 = 180 - (c3 + b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
@@ -828,8 +828,8 @@ function SOHCAHTOA2() {
     }
 
     if (c3 != 0 && ab3 != 0) {
-        ac3 = bc3 / sine(a3);
-        ab3 = bc3 * tan(a3);
+        ac3 = bc3 / sine(c3);
+        ab3 = bc3 * tan(c3);
         b3 = 90;
         a3 = 180 - (c3 + b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
