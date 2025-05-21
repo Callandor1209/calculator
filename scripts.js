@@ -785,7 +785,7 @@ function SOHCAHTOA2() {
     if (a3 != 0 && bc3 != 0) {
         console.log(a3);
         ab3 = bc3 / tan(a3);
-        ac3 = bc3 / cos(a3);
+        ac3 = bc3 / sine(a3);
         b3 = 90;
         c3 = 180 - (a3 + b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
