@@ -783,6 +783,7 @@ function SOHCAHTOA2() {
     ac3 = parseFloat(ac3);
 
     if (a3 != 0 && bc3 != 0) {
+        console.log(a3);
         ab3 = bc3 / tan(a3);
         ac3 = bc3 / cos(a3);
         b3 = 90;
@@ -818,15 +819,15 @@ function SOHCAHTOA2() {
         return;
     }
     if (a3 != 0 && ab3 != 0) {
-        ab3 = ab3 / tan(a3);
-        ac3 = ab3 * sine(a3);
+        ab3 = ab3 * tan(a3);
+        ac3 = ab3 / cos(a3);
         b3 = 90;
         c3 = 180 - (a3 + b3);
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
         return;
     }
 
-    if (c3 != 0 && bc3 != 0) {
+    if (c3 != 0 && ab3 != 0) {
         ac3 = bc3 / sine(a3);
         ab3 = bc3 * tan(a3);
         b3 = 90;
@@ -877,22 +878,22 @@ function SOHCAHTOA2() {
 }
 
 function tan(degrees) {
-    return Math.tan(degrees * Math.PI/180);
+    return Math.tan(degrees * (Math.PI/180));
 }
 function cos(degrees) {
-    return Math.cos(degrees * Math.PI/180);
+    return Math.cos(degrees * (Math.PI/180));
 }
 function sine(degrees) {
-    return Math.sin(degrees * Math.PI/180);
+    return Math.sin(degrees * (Math.PI/180));
 }
 function sineinv(degrees) {
-    return Math.asin(degrees * Math.PI/180);
+    return Math.asin(degrees)* 180/Math.PI;
 }
 function cosinv(degrees) {
-    return Math.acos(degrees * Math.PI/180);
+    return Math.acos(degrees)* 180/Math.PI;
 }
 function taninv(degrees) {
-    return Math.atan(degrees * Math.PI/180);
+    return Math.atan(degrees)* 180/Math.PI;
 }
 function darkmode() {
     var element = document.body;
