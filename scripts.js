@@ -714,6 +714,11 @@ function quadratics2() {
 }
 
 function SOHCAHTOA() {
+
+    var img = document.createElement("img")
+    img.src = "../Untitled drawing.png";
+    img.height = 500;
+    container.appendChild(img);
     var x1label = document.createElement("label");
     x1label.textContent = "a: ";
     var contx1 = document.createElement("input");
