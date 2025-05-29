@@ -993,7 +993,7 @@ function locos2(){
     ac3 = parseFloat(ac3);
     if(ab3 != 0 && a3 != 0 && ac3 != 0){
         bc3 = Math.sqrt(ac3* ac3 + ab3 * ab3 -2 * ab3 * ac3 * cos(a3))
-        b3 = cosinv(ac3 * ac3 - (bc3 * bc3 + ab3 * ab3))/ (2* bc3 * ab3);
+        b3 = cosinv(ac3 * ac3 - (bc3 * bc3 + ab3 * ab3)/ (2* bc3 * ab3));
         c3 = 180 - b3 - a3;
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
         return;  
@@ -1001,7 +1001,7 @@ function locos2(){
 
     if(bc3 != 0 && ab3 != 0 && b3 != 0){
         ac3 = Math.sqrt(bc3* bc3 + ab3 * ab3 -2 * bc3 * ab3 * cos(b3))
-        a3 = cosinv(ab3 * ab3 - (bc3 * bc3 + ac3 * ac3))/ (2* bc3 * ac3);
+        a3 = cosinv(ab3 * ab3 - (bc3 * bc3 + ac3 * ac3)/ (2* bc3 * ac3));
         c3 = 180 - b3 - a3;
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
         return;  
@@ -1009,14 +1009,14 @@ function locos2(){
 
         if(ac3 != 0 && bc3 != 0 && c3 != 0){
         ab3 = Math.sqrt(bc3* bc3 + ac3 * ac3 -2 * bc3 * ac3 * cos(c3))
-        a3 = cosinv(ab3 * ab3 - (bc3 * bc3 + ac3 * ac3))/ (2* bc3 * ac3);
+        a3 = cosinv(ab3 * ab3 - (bc3 * bc3 + ac3 * ac3)/ (2* bc3 * ac3));
         b3 = 180 - c3 - a3;
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
         return;  
     }
      if(ac3 != 0 && bc3 != 0 && ab3 != 0){
-        a3 = cosinv(ab3 * ab3 - (bc3 * bc3 + ac3 * ac3))/ (2* bc3 * ac3);
-        b3 = cosinv(ac3 * ac3 - (bc3 * bc3 + ab3 * ab3))/ (2* bc3 * ab3);
+        a3 = cosinv(ab3 * ab3 - (bc3 * bc3 + ac3 * ac3)/ (2* bc3 * ac3));
+        b3 = cosinv(ac3 * ac3 - (bc3 * bc3 + ab3 * ab3)/ (2* bc3 * ab3));
         c3 = 180 - b3 - a3;
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
         return;  
