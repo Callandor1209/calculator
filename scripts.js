@@ -86,6 +86,13 @@ function getResult() {
 
         case "SOHCAHTOA":
             SOHCAHTOA();
+            break;
+        case "losin":
+            losincos();
+            break;
+        case "locos":
+            losincos();
+            break;
     }
 
     const submitbutton2 = document.createElement("button");
@@ -148,6 +155,12 @@ function doMath() {
 
         case "SOHCAHTOA":
             SOHCAHTOA2();
+            break;
+        case "losin":
+            losin2();
+            break;
+        case "locos":
+            locos2();
             break;
     }
 }
@@ -882,6 +895,134 @@ function SOHCAHTOA2() {
     }
 
 }
+
+function losincos() {
+        var x1label = document.createElement("label");
+    x1label.textContent = "a: ";
+    var contx1 = document.createElement("input");
+    contx1.setAttribute("id", "a");
+    contx1.setAttribute("value", 0);
+    contx1.type = "text";
+    container.appendChild(x1label);
+    container.appendChild(contx1);
+    a1 = document.querySelector("#a");
+
+    var blabel = document.createElement("label");
+    blabel.textContent = "b: "
+    var contb = document.createElement("input");
+    contb.setAttribute("id", "b");
+    contb.setAttribute("value",0);
+    contb.type = "text";
+    container.appendChild(blabel);
+    container.appendChild(contb);
+    b1 = document.querySelector("#b");
+
+
+    var dialatelabel = document.createElement("label");
+    dialatelabel.textContent = "c: "
+    var contdialate = document.createElement("input");
+    contdialate.setAttribute("id", "c");
+    contdialate.setAttribute("value", 0);
+    contdialate.type = "text";
+    container.appendChild(dialatelabel);
+    container.appendChild(contdialate);
+    c1 = document.querySelector("#c");
+
+    var y1label = document.createElement("label");
+    y1label.textContent = "ab: ";
+    var conty1 = document.createElement("input");
+    conty1.setAttribute("id", "ab");
+    conty1.setAttribute("value", 0);
+    conty1.type = "text";
+    container.appendChild(y1label);
+    container.appendChild(conty1);
+    ab1 = document.querySelector("#ab");
+
+
+
+    var x1label = document.createElement("label");
+    x1label.textContent = "bc: ";
+    var contx1 = document.createElement("input");
+    contx1.setAttribute("id", "bc");
+    contx1.setAttribute("value", 0);
+    contx1.type = "text";
+    container.appendChild(x1label);
+    container.appendChild(contx1);
+    bc1 = document.querySelector("#bc");
+
+
+    var dialatelabel = document.createElement("label");
+    dialatelabel.textContent = "ac: "
+    var contdialate = document.createElement("input");
+    contdialate.setAttribute("id", "ac");
+    contdialate.setAttribute("value", 0);
+    contdialate.type = "text";
+    container.appendChild(dialatelabel);
+    container.appendChild(contdialate);
+    ac1 = document.querySelector("#ac");
+}
+
+function losin2(){
+    var a3 = a1.value;
+    a3 = parseFloat(a3);
+    var c3 = c1.value;
+    c3 = parseFloat(c3);
+    var b3 = b1.value;
+    b3 = parseFloat(b3);
+    var bc3 = bc1.value;
+    bc3 = parseFloat(bc3);
+    var ab3 = ab1.value;
+    ab3 = parseFloat(ab3);
+    var ac3 = ac1.value;
+    ac3 = parseFloat(ac3);
+    
+}
+
+function locos2(){
+    var a3 = a1.value;
+    a3 = parseFloat(a3);
+    var c3 = c1.value;
+    c3 = parseFloat(c3);
+    var b3 = b1.value;
+    b3 = parseFloat(b3);
+    var bc3 = bc1.value;
+    bc3 = parseFloat(bc3);
+    var ab3 = ab1.value;
+    ab3 = parseFloat(ab3);
+    var ac3 = ac1.value;
+    ac3 = parseFloat(ac3);
+    if(ab3 != 0 && a3 != 0 && ac3 != 0){
+        bc3 = Math.sqrt(ac3* ac3 + ab3 * ab3 -2 * ab3 * ac3 * cos(a3))
+        b3 = cosinv(ac3 * ac3 - (bc3 * bc3 + ab3 * ab3))/ (2* bc3 * ab3);
+        c3 = 180 - b3 - a3;
+        answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+        return;  
+    }
+
+    if(bc3 != 0 && ab3 != 0 && b3 != 0){
+        ac3 = Math.sqrt(bc3* bc3 + ab3 * ab3 -2 * bc3 * ab3 * cos(b3))
+        a3 = cosinv(ab3 * ab3 - (bc3 * bc3 + ac3 * ac3))/ (2* bc3 * ac3);
+        c3 = 180 - b3 - a3;
+        answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+        return;  
+    }
+
+        if(ac3 != 0 && bc3 != 0 && c3 != 0){
+        ab3 = Math.sqrt(bc3* bc3 + ac3 * ac3 -2 * bc3 * ac3 * cos(c3))
+        a3 = cosinv(ab3 * ab3 - (bc3 * bc3 + ac3 * ac3))/ (2* bc3 * ac3);
+        b3 = 180 - c3 - a3;
+        answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+        return;  
+    }
+     if(ac3 != 0 && bc3 != 0 && ab3 != 0){
+        a3 = cosinv(ab3 * ab3 - (bc3 * bc3 + ac3 * ac3))/ (2* bc3 * ac3);
+        b3 = cosinv(ac3 * ac3 - (bc3 * bc3 + ab3 * ab3))/ (2* bc3 * ab3);
+        c3 = 180 - b3 - a3;
+        answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+        return;  
+    }
+}
+
 
 function tan(degrees) {
     return Math.tan(degrees * (Math.PI / 180));
