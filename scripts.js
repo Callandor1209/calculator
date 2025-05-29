@@ -898,7 +898,7 @@ function SOHCAHTOA2() {
 
 function losincos() {
         var x1label = document.createElement("label");
-    x1label.textContent = "a: ";
+    x1label.textContent = "A: ";
     var contx1 = document.createElement("input");
     contx1.setAttribute("id", "a");
     contx1.setAttribute("value", 0);
@@ -908,7 +908,7 @@ function losincos() {
     a1 = document.querySelector("#a");
 
     var blabel = document.createElement("label");
-    blabel.textContent = "b: "
+    blabel.textContent = "B: "
     var contb = document.createElement("input");
     contb.setAttribute("id", "b");
     contb.setAttribute("value",0);
@@ -919,7 +919,7 @@ function losincos() {
 
 
     var dialatelabel = document.createElement("label");
-    dialatelabel.textContent = "c: "
+    dialatelabel.textContent = "C: "
     var contdialate = document.createElement("input");
     contdialate.setAttribute("id", "c");
     contdialate.setAttribute("value", 0);
@@ -929,7 +929,7 @@ function losincos() {
     c1 = document.querySelector("#c");
 
     var y1label = document.createElement("label");
-    y1label.textContent = "ab: ";
+    y1label.textContent = "c: ";
     var conty1 = document.createElement("input");
     conty1.setAttribute("id", "ab");
     conty1.setAttribute("value", 0);
@@ -941,7 +941,7 @@ function losincos() {
 
 
     var x1label = document.createElement("label");
-    x1label.textContent = "bc: ";
+    x1label.textContent = "a: ";
     var contx1 = document.createElement("input");
     contx1.setAttribute("id", "bc");
     contx1.setAttribute("value", 0);
@@ -952,7 +952,7 @@ function losincos() {
 
 
     var dialatelabel = document.createElement("label");
-    dialatelabel.textContent = "ac: "
+    dialatelabel.textContent = "b: "
     var contdialate = document.createElement("input");
     contdialate.setAttribute("id", "ac");
     contdialate.setAttribute("value", 0);
@@ -995,7 +995,7 @@ function locos2(){
         bc3 = Math.sqrt(ac3* ac3 + ab3 * ab3 -2 * ab3 * ac3 * cos(a3))
         b3 = cosinv(ac3 * ac3 - (bc3 * bc3 + ab3 * ab3)/ (-2* bc3 * ab3));
         c3 = 180 - b3 - a3;
-        answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+        answer.textContent = "A = " + a3 + " B = " + b3 + " C = " + c3 + " b = " + ac3 + " c = " + ab3 + " a = " + bc3;
         return;  
     }
 
@@ -1003,7 +1003,7 @@ function locos2(){
         ac3 = Math.sqrt(bc3* bc3 + ab3 * ab3 -2 * bc3 * ab3 * cos(b3))
         a3 = cosinv(ab3 * ab3 - (bc3 * bc3 + ac3 * ac3)/ (-2* bc3 * ac3));
         c3 = 180 - b3 - a3;
-        answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+        answer.textContent = "A = " + a3 + " B = " + b3 + " C = " + c3 + " b = " + ac3 + " c = " + ab3 + " a = " + bc3;
         return;  
     }
 
@@ -1011,14 +1011,14 @@ function locos2(){
         ab3 = Math.sqrt(bc3* bc3 + ac3 * ac3 -2 * bc3 * ac3 * cos(c3))
         a3 = cosinv(ab3 * ab3 - (bc3 * bc3 + ac3 * ac3)/ (-2* bc3 * ac3));
         b3 = 180 - c3 - a3;
-        answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+        answer.textContent = "A = " + a3 + " B = " + b3 + " C = " + c3 + " b = " + ac3 + " c = " + ab3 + " a = " + bc3;
         return;  
     }
      if(ac3 != 0 && bc3 != 0 && ab3 != 0){
         a3 = cosinv(ab3 * ab3 - (bc3 * bc3 + ac3 * ac3)/ (-2* bc3 * ac3));
         b3 = cosinv(ac3 * ac3 - (bc3 * bc3 + ab3 * ab3)/ (-2* bc3 * ab3));
         c3 = 180 - b3 - a3;
-        answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
+        answer.textContent = "A = " + a3 + " B = " + b3 + " C = " + c3 + " b = " + ac3 + " c = " + ab3 + " a = " + bc3;
         return;  
     }
 }
