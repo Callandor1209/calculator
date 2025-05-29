@@ -793,6 +793,7 @@ function SOHCAHTOA2() {
         ac3 = bc3 / sine(a3);
         b3 = 90;
         c3 = 180 - (a3 + b3);
+        var area = 
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
         return;
 
@@ -903,4 +904,10 @@ function taninv(degrees) {
 function darkmode() {
     var element = document.body;
     element.classList.toggle("darkmode");
+}
+function checkDarkMode(){
+    var isDarkMode = window.matchMedia("(prefers-color-scheme: dark");
+    if(isDarkMode.matches){
+     darkmode();
+    }
 }
