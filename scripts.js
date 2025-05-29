@@ -1018,6 +1018,8 @@ function locos2(){
         return;  
     }
      if(lb != 0 && la != 0 && lc != 0){
+        test = lc * lc - (la * la + lb * lb)/ (-2* la * lb)
+        console.log(test)
         a3 = cosinv((lc * lc - (la * la + lb * lb)/ (-2* la * lb)));
         b3 = cosinv((lb * lb - (la * la + lc * lc)/ (-2* la * lc)));
         c3 = 180 - b3 - a3;
