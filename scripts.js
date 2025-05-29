@@ -7,6 +7,7 @@ const container = document.querySelector("#container");
 const answer = document.querySelector("#answer");
 const drkmode = document.querySelector("#darkmode");
 drkmode.addEventListener("click", darkmode);
+checkDarkMode();
 var input;
 var rax;
 var ray;
