@@ -794,7 +794,6 @@ function SOHCAHTOA2() {
         ac3 = bc3 / sine(a3);
         b3 = 90;
         c3 = 180 - (a3 + b3);
-        var area = 
         answer.textContent = "<a = " + a3 + " <b = " + b3 + " <c = " + c3 + " ac = " + ac3 + " ab = " + ab3 + " bc = " + bc3;
         return;
 
@@ -885,30 +884,30 @@ function SOHCAHTOA2() {
 }
 
 function tan(degrees) {
-    return Math.tan(degrees * (Math.PI/180));
+    return Math.tan(degrees * (Math.PI / 180));
 }
 function cos(degrees) {
-    return Math.cos(degrees * (Math.PI/180));
+    return Math.cos(degrees * (Math.PI / 180));
 }
 function sine(degrees) {
-    return Math.sin(degrees * (Math.PI/180));
+    return Math.sin(degrees * (Math.PI / 180));
 }
 function sineinv(degrees) {
-    return Math.asin(degrees)* 180/Math.PI;
+    return Math.asin(degrees) * 180 / Math.PI;
 }
 function cosinv(degrees) {
-    return Math.acos(degrees)* 180/Math.PI;
+    return Math.acos(degrees) * 180 / Math.PI;
 }
 function taninv(degrees) {
-    return Math.atan(degrees)* 180/Math.PI;
+    return Math.atan(degrees) * 180 / Math.PI;
 }
 function darkmode() {
     var element = document.body;
     element.classList.toggle("darkmode");
 }
-function checkDarkMode(){
+function checkDarkMode() {
     var isDarkMode = window.matchMedia("(prefers-color-scheme: dark");
-    if(isDarkMode.matches){
-     darkmode();
+    if (isDarkMode.matches) {
+        darkmode();
     }
 }
