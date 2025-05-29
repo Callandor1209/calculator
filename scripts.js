@@ -969,12 +969,13 @@ function losin2(){
     c3 = parseFloat(c3);
     var b3 = b1.value;
     b3 = parseFloat(b3);
-    var bc3 = bc1.value;
-    bc3 = parseFloat(bc3);
-    var ab3 = ab1.value;
-    ab3 = parseFloat(ab3);
-    var ac3 = ac1.value;
-    ac3 = parseFloat(ac3);
+    var la = bc1.value;
+    la = parseFloat(la);
+    var lc = ab1.value;
+    lc = parseFloat(lc);
+    var lb = ac1.value;
+    lb = parseFloat(lb);
+
     
 }
 
@@ -985,40 +986,40 @@ function locos2(){
     c3 = parseFloat(c3);
     var b3 = b1.value;
     b3 = parseFloat(b3);
-    var bc3 = bc1.value;
-    bc3 = parseFloat(bc3);
-    var ab3 = ab1.value;
-    ab3 = parseFloat(ab3);
-    var ac3 = ac1.value;
-    ac3 = parseFloat(ac3);
-    if(ab3 != 0 && a3 != 0 && ac3 != 0){
-        bc3 = Math.sqrt(ac3* ac3 + ab3 * ab3 -2 * ab3 * ac3 * cos(a3))
-        b3 = cosinv(ac3 * ac3 - (bc3 * bc3 + ab3 * ab3)/ (-2* bc3 * ab3));
+    var la = bc1.value;
+    la = parseFloat(la);
+    var lc = ab1.value;
+    lc = parseFloat(lc);
+    var lb = ac1.value;
+    lb = parseFloat(lb);
+    if(lc != 0 && a3 != 0 && lb != 0){
+        la = Math.sqrt(lb* lb + lc * lc -2 * lc * lb * cos(a3))
+        b3 = cosinv(lb * lb - (la * la + lc * lc)/ (-2* la * lc));
         c3 = 180 - b3 - a3;
-        answer.textContent = "A = " + a3 + " B = " + b3 + " C = " + c3 + " b = " + ac3 + " c = " + ab3 + " a = " + bc3;
+        answer.textContent = "A = " + a3 + " B = " + b3 + " C = " + c3 + " b = " + lb + " c = " + lc + " a = " + la;
         return;  
     }
 
-    if(bc3 != 0 && ab3 != 0 && b3 != 0){
-        ac3 = Math.sqrt(bc3* bc3 + ab3 * ab3 -2 * bc3 * ab3 * cos(b3))
-        a3 = cosinv(ab3 * ab3 - (bc3 * bc3 + ac3 * ac3)/ (-2* bc3 * ac3));
+    if(la != 0 && lc != 0 && b3 != 0){
+        lb = Math.sqrt(la* la + lc * lc -2 * la * lc * cos(b3))
+        a3 = cosinv(lc * lc - (la * la + lb * lb)/ (-2* la * lb));
         c3 = 180 - b3 - a3;
-        answer.textContent = "A = " + a3 + " B = " + b3 + " C = " + c3 + " b = " + ac3 + " c = " + ab3 + " a = " + bc3;
+        answer.textContent = "A = " + a3 + " B = " + b3 + " C = " + c3 + " b = " + lb + " c = " + lc + " a = " + la;
         return;  
     }
 
-        if(ac3 != 0 && bc3 != 0 && c3 != 0){
-        ab3 = Math.sqrt(bc3* bc3 + ac3 * ac3 -2 * bc3 * ac3 * cos(c3))
-        a3 = cosinv(ab3 * ab3 - (bc3 * bc3 + ac3 * ac3)/ (-2* bc3 * ac3));
+        if(lb != 0 && la != 0 && c3 != 0){
+        lc = Math.sqrt(la* la + lb * lb -2 * la * lb * cos(c3))
+        a3 = cosinv(lc * lc - (la * la + lb * lb)/ (-2* la * lb));
         b3 = 180 - c3 - a3;
-        answer.textContent = "A = " + a3 + " B = " + b3 + " C = " + c3 + " b = " + ac3 + " c = " + ab3 + " a = " + bc3;
+        answer.textContent = "A = " + a3 + " B = " + b3 + " C = " + c3 + " b = " + lb + " c = " + lc + " a = " + la;
         return;  
     }
-     if(ac3 != 0 && bc3 != 0 && ab3 != 0){
-        a3 = cosinv(ab3 * ab3 - (bc3 * bc3 + ac3 * ac3)/ (-2* bc3 * ac3));
-        b3 = cosinv(ac3 * ac3 - (bc3 * bc3 + ab3 * ab3)/ (-2* bc3 * ab3));
+     if(lb != 0 && la != 0 && lc != 0){
+        a3 = cosinv(lc * lc - (la * la + lb * lb)/ (-2* la * lb));
+        b3 = cosinv(lb * lb - (la * la + lc * lc)/ (-2* la * lc));
         c3 = 180 - b3 - a3;
-        answer.textContent = "A = " + a3 + " B = " + b3 + " C = " + c3 + " b = " + ac3 + " c = " + ab3 + " a = " + bc3;
+        answer.textContent = "A = " + a3 + " B = " + b3 + " C = " + c3 + " b = " + lb + " c = " + lc + " a = " + la;
         return;  
     }
 }
