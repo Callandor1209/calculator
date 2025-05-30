@@ -87,9 +87,6 @@ function getResult() {
         case "SOHCAHTOA":
             SOHCAHTOA();
             break;
-        case "losin":
-            losincos();
-            break;
         case "locos":
             losincos();
             break;
@@ -156,9 +153,7 @@ function doMath() {
         case "SOHCAHTOA":
             SOHCAHTOA2();
             break;
-        case "losin":
-            losin2();
-            break;
+            
         case "locos":
             locos2();
             break;
@@ -958,22 +953,6 @@ function losincos() {
     ac1 = document.querySelector("#ac");
 }
 
-function losin2(){
-    var a3 = a1.value;
-    a3 = parseFloat(a3);
-    var c3 = c1.value;
-    c3 = parseFloat(c3);
-    var b3 = b1.value;
-    b3 = parseFloat(b3);
-    var la = bc1.value;
-    la = parseFloat(la);
-    var lc = ab1.value;
-    lc = parseFloat(lc);
-    var lb = ac1.value;
-    lb = parseFloat(lb);
-
-    
-}
 
 function locos2(){
     var a3 = a1.value;
