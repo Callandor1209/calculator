@@ -729,10 +729,6 @@ function quadratics2() {
 
 function SOHCAHTOA() {
 
-    var img = document.createElement("img")
-    img.src = "../Untitled drawing.png";
-    img.height = 500;
-    container.appendChild(img);
     var x1label = document.createElement("label");
     x1label.textContent = "a: ";
     var contx1 = document.createElement("input");
@@ -993,10 +989,9 @@ function locos2(){
     var lb = ac1.value;
     lb = parseFloat(lb);
     test = cosinv(0.5262384);
-    console.log(test);
     if(lc != 0 && a3 != 0 && lb != 0){
         la = Math.sqrt(lb* lb + lc * lc -2 * lc * lb * cos(a3));
-        b3 = cosinv((lb * lb - (la * la + lc * lc)/ (-2* la * lc)));
+        b3 = cosinv(((lb * lb - (la * la + lc * lc))/ (-2* la * lc)));
         c3 = 180 - b3 - a3;
         answer.textContent = "A = " + a3 + " B = " + b3 + " C = " + c3 + " b = " + lb + " c = " + lc + " a = " + la;
         return;  
@@ -1004,7 +999,7 @@ function locos2(){
 
     if(la != 0 && lc != 0 && b3 != 0){
         lb = Math.sqrt(la* la + lc * lc -2 * la * lc * cos(b3));
-        a3 = cosinv((lc * lc - (la * la + lb * lb)/ (-2* la * lb)));
+        a3 = cosinv(((lc * lc - (la * la + lb * lb))/ (-2* la * lb)));
         c3 = 180 - b3 - a3;
         answer.textContent = "A = " + a3 + " B = " + b3 + " C = " + c3 + " b = " + lb + " c = " + lc + " a = " + la;
         return;  
@@ -1012,16 +1007,14 @@ function locos2(){
 
         if(lb != 0 && la != 0 && c3 != 0){
         lc = Math.sqrt(la* la + lb * lb -2 * la * lb * cos(c3));
-        a3 = cosinv((lc * lc - (la * la + lb * lb)/ (-2* la * lb)));
+        a3 = cosinv(((lc * lc - (la * la + lb * lb))/ (-2* la * lb)));
         b3 = 180 - c3 - a3;
         answer.textContent = "A = " + a3 + " B = " + b3 + " C = " + c3 + " b = " + lb + " c = " + lc + " a = " + la;
         return;  
     }
      if(lb != 0 && la != 0 && lc != 0){
-        test = lc * lc - (la * la + lb * lb)/ (-2* la * lb)
-        console.log(test)
-        a3 = cosinv((lc * lc - (la * la + lb * lb)/ (-2* la * lb)));
-        b3 = cosinv((lb * lb - (la * la + lc * lc)/ (-2* la * lc)));
+        a3 = cosinv(((lc * lc - (la * la + lb * lb))/ (-2* la * lb)));
+        b3 = cosinv(((lb * lb - (la * la + lc * lc))/ (-2* la * lc)));
         c3 = 180 - b3 - a3;
         answer.textContent = "A = " + a3 + " B = " + b3 + " C = " + c3 + " b = " + lb + " c = " + lc + " a = " + la;
         return;  
